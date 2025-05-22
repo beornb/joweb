@@ -48,6 +48,11 @@ The following colours are defined in `src/app/globals.css` and used throughout t
 ![#fbf9f5](https://swatch.vercel.app/?color=%23fbf9f5)
 ![#FBEAEB](https://swatch.vercel.app/?color=%23FBEAEB)
 ![#7C525A](https://swatch.vercel.app/?color=%237C525A)
+![#A6471B](https://swatch.vercel.app/?color=%23A6471B)
+![#A6471B](https://swatch.vercel.app/?color=%23A6471B)
+![#4A3B3C](https://swatch.vercel.app/?color=%234A3B3C)
+![#E0B8BF](https://swatch.vercel.app/?color=%23E0B8BF)
+![#D4AF37](https://swatch.vercel.app/?color=%23D4AF37)
 
 
 | Variable Name             | Hex Value | Description            |
