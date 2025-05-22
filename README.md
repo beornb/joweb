@@ -43,6 +43,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 The following colours are defined in `src/app/globals.css` and used throughout the project:
 
+
+
+![#fbf9f5](https://swatch.vercel.app/?color=%23fbf9f5)
+![#FBEAEB](https://swatch.vercel.app/?color=%23FBEAEB)
+![#7C525A](https://swatch.vercel.app/?color=%237C525A)
+
+
 | Variable Name             | Hex Value | Description            |
 | ------------------------- | --------- | ---------------------- |
 | `--rose-gold-bg-light`    | `#fbf9f5` | Pale Pink              |
