@@ -45,7 +45,7 @@ The following colours are defined in `src/app/globals.css` and used throughout t
 
 
 
-![#fbf9f5](https://swatch.vercel.app/?color=%23fbf9f5)
+![#FBF9F5](https://swatch.vercel.app/?color=%23FBF9F5)
 ![#FBEAEB](https://swatch.vercel.app/?color=%23FBEAEB)
 ![#7C525A](https://swatch.vercel.app/?color=%237C525A)
 ![#A6471B](https://swatch.vercel.app/?color=%23A6471B)
