@@ -11,6 +11,10 @@
   --rose-gold-fg-dark: #E0B8BF;  /* Light Soft Rose */
   --rose-gold-bg-mid: #A6471B;  /* Rusty Pink */
   --golden: #D4AF37; /* Yellow Gold */
+  --light-border: #E8C9AD;
+  --light-beige: rgb(241, 229, 214);
+  --dark-beige: rgb(251, 234, 217);
+
 
   /* Apply Rose Gold as default theme */
   --background: var(--rose-gold-bg-light);
@@ -21,6 +25,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-figtree);
+}
+
+.border-light {
+ border: 7px solid rgba(232, 201, 173, .5)
 }
 
 
@@ -37,6 +45,15 @@ body {
 .text-mid {
   color:  var(--rose-gold-bg-mid);
 }
+.carosel {
+  max-width: calc(100vw - 110px)
+}
+@media screen and (min-width: 768px) {
+  .carosel {
+    max-width: calc(100vw - 300px)
+  }
+}
+
 .text-black {
   color:  var(--color-black);
 }
@@ -68,3 +85,4 @@ body {
   object-fit: cover;
   z-index: -1;
 }
+

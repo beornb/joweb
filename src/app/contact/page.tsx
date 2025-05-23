@@ -16,7 +16,7 @@ export default function ContactPage() {
           Your browser does not support the video tag.
         </video> */}
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full">
-          <div className="container mx-auto max-w-[850px] bg-white/80 rounded-lg p-12 mt-8 text-center">
+          <div className="container mx-auto max-w-[950px] bg-white/80 rounded-lg p-12 mt-8 text-center">
             <h1 className="text-4xl font-bold text-black">Contact Me</h1>
             <p className="text-lg text-black mt-4">
               This is the contact page. You can add a contact form or contact details here.

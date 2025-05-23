@@ -8,19 +8,19 @@ const MotionImage = motion(Image); // Create a motion component from next/image
 
 export default function Impact() {
   return (
-    <section className="w-full mt-44" >
-      <div className="container mx-auto max-w-[850px] dark-text">
+    <section className="w-full mt-24" >
+      <div className="container mx-auto max-w-[950px]">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/4 text-center md:text-left">
             <h2 className="text-2xl font-medium  mb-6 md:mb-0">My Impact</h2>
           </div>
           <div className="md:w-3/4 text-left flex gap-5 relative flex-col md:flex-row"> {/* Added relative positioning context */}
-            <ImpactCard title="15 +" subtitle="15+ Years Experience" text="Bridging product design, strategy & marketing across SaaS and B2C & B2B."></ImpactCard>
-            <ImpactCard title="6 +" subtitle="Trusted by 6+ Teams" text="Partnered with Product, Engineering, CS, and Marketing on key launches."></ImpactCard>
-            <ImpactCard title="30%" subtitle="Faster Time to Market" text="Led quarterly release cycles with cross-functional alignment." extraLine={true}></ImpactCard>
+            <ImpactCard title="15+" subtitle="Years Experience" text="Bridging product design, strategy & marketing across SaaS and B2C & B2B."></ImpactCard>
+            <ImpactCard title="6+" subtitle="Trusted Teams" text="Partnered with Product, Engineering, CS, and Marketing on key launches."></ImpactCard>
+            <ImpactCard title="30%" subtitle="Time to Market" text="Led quarterly release cycles with cross-functional alignment." extraLine={true}></ImpactCard>
             
             <MotionImage
-              src="/elements/element (3).png"
+              src="/elements/element_3.png"
               alt="Decorative Element"
               width={120} // You can adjust this width
               height={120} // You can adjust this height
