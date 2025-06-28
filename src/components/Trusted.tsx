@@ -57,7 +57,7 @@ export default function Trusted() {
           {/* Carousel Viewport: This div clips the horizontally scrolling content. Added 'relative' for positioning fade overlays. */}
           <div className="md:w-3/4 overflow-hidden carosel relative">
             {/* Left fade overlay */}
-            <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#fbf9f5] to-transparent pointer-events-none z-10" />
+            <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#fffffe] to-transparent pointer-events-none z-10" />
             <motion.div
               className="flex" // This is the track that moves. flex-shrink-0 prevents it from shrinking.
               variants={marqueeVariants}
@@ -81,7 +81,7 @@ export default function Trusted() {
               ))} 
             </motion.div>
             {/* Right fade overlay */}
-            <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#fbf9f5] to-transparent pointer-events-none z-10" />
+            <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#fffffe] to-transparent pointer-events-none z-10" />
           </div>
         </div>
       </div>

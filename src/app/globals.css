@@ -2,9 +2,10 @@
 
 :root {
   /* Rose Gold Palette */
-  
-  --rose-gold-bg-light: #fbf9f5; /* Pale Pink */
+  --bg-light: #fffffe; /* Off-White */
+  --rose-gold-bg-light: #fbf9f5; ; /* Pale Pink */
   --rose-gold-pale-pink: #FBEAEB; /* Pale Pink */
+  --rose-gold-pink: #e6d4d5; /* Pale Pink */
   --rose-gold-fg-light: #7C525A; /* Dark Desaturated Rose */
   --rose-gold-fg-mid: #A6471B; /* Rusty Pink */
   --rose-gold-bg-dark: #4A3B3C;  /* Dark Warm Rosy Brown */
@@ -14,10 +15,13 @@
   --light-border: #E8C9AD;
   --light-beige: rgb(241, 229, 214);
   --dark-beige: rgb(251, 234, 217);
+  --mono-light: #EDEFF1;
+  --rose-gold-bg-semi:#e2d5ca;
+  
 
 
   /* Apply Rose Gold as default theme */
-  --background: var(--rose-gold-bg-light);
+  --background: var(--bg-light);
   --foreground: var(--rose-gold-fg-light);
 }
 
@@ -31,6 +35,9 @@
  border: 7px solid rgba(232, 201, 173, .5)
 }
 
+.border-light-project {
+ border: 3px solid rgba(232, 201, 173, .5)
+}
 
 
 body {
@@ -61,6 +68,12 @@ body {
   color:  var(--golden);
 }
 
+.header-height {
+  min-height: calc(100vh - 150px)
+}
+.header-height-project {
+  min-height: calc(100vh - 250px)
+}
 .text-light {
   color:  var(--rose-gold-bg-light);
 }
@@ -81,7 +94,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  max-height: 800px;
+  
   object-fit: cover;
   z-index: -1;
 }

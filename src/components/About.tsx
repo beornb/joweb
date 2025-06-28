@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="w-full mt-44" >
+    <section className="w-full mt-24" >
       <div className="container mx-auto max-w-[950px]">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/4 text-center md:text-left">

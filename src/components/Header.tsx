@@ -2,10 +2,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Header() {
   const shouldReduceMotion = useReducedMotion();
   const transitionDuration = shouldReduceMotion ? 0 : 0.3;
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5;
+    }
+  }, []);
 
   const slidingBgVariants = {
     initial: { x: "100%" }, // Start off-screen to the right
@@ -45,8 +54,14 @@ export default function Header() {
     },
   };
 
+
   return (
-    <header className="mt-0 md:mt-12 lg:mt-24">
+    <header  className="header-height flex p-8 md:pt-14 md:pb-14 lg:pt-30 lg:pb-30 relative overflow-hidden flex"  >
+        <video ref={videoRef} autoPlay loop muted playsInline  className="video-background">
+          <source src="/video/bg_rosegold.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
 
       <div id="container" className="container mx-auto max-w-[950px] bg-white/80 rounded-2xl border-light  p-12">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
