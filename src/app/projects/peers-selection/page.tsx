@@ -1,10 +1,14 @@
 import ProjectHeader from "@/components/ProjectHeader";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PeersSelectionPage() {
   return (
-    <>
+    <div className="relative">
+      <Link href="/" className="absolute top-8 left-8 z-10">
+        <Image src="/images/icons/home.svg" alt="Back" width={40} height={40} />
+      </Link>
       <ProjectHeader
         projectHeading="Reworked for clarity. <br /> Designed for precision.<br /> Select your best-fit peers with ease."
         projectTags={[
@@ -19,28 +23,28 @@ export default function PeersSelectionPage() {
       />
       <main className="container mx-auto py-12 px-4 min-h-screen flex flex-col items-center justify-center text-center">
         <div id="details" className="flex gap-8">
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">ROLE</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">ROLE</p>
             <p>Product Designer</p>
             <p>Researcher</p>
             <p>Product Marketing Manager</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TEAM</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TEAM</p>
             <p>Product Owner</p>
             <p>Product Designer</p>
             <p>Valuation Services Specialist</p>
             <p>Customer Success Specialist</p>
             <p>Sales Specialists</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TOOLS</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TOOLS</p>
             <p>Figma, Post Hog</p>
             <p>Metabase, Intercom</p>
             <p>Google Suite</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TIMELINE</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TIMELINE</p>
             <p>Commercial Release Cycles </p>
             <p>= 12 weeks</p>
           </div>
@@ -50,7 +54,7 @@ export default function PeersSelectionPage() {
           id="main"
           className="container mx-auto max-w-[700px] mt-4 text-left text-black"
         >
-          <h2 className="text-mid text-3xl font-medium mt-6">Overview</h2>
+          <h2 className="text-mid text-3xl font-medium mt-16">Overview</h2>
           <p className=" mt-4">
             This case study examines how uncovering and reworking underutilised
             functionality can pave the way for algorithm-driven insights,
@@ -58,7 +62,7 @@ export default function PeersSelectionPage() {
             evolving toward smarter, automated benchmarking AI.
           </p>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">About Valutico</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">About Valutico</h3>
 
           <p className=" mt-4">
             Valutico empowers financial professionals with a powerful suite of
@@ -66,7 +70,7 @@ export default function PeersSelectionPage() {
             and advanced analytics for smarter decision-making.
           </p>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Problem</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Problem</h3>
 
           <p className=" mt-4">
             The Peer Selection process is critical for accurate business
@@ -87,7 +91,7 @@ export default function PeersSelectionPage() {
             src="/images/project/screenshot-peers-selection-1.png"
           />
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Solution</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Solution</h3>
 
           <p className=" mt-4">
             The original peer selection flow dropped users into a pre-filled
@@ -115,7 +119,7 @@ export default function PeersSelectionPage() {
             build a tailored list that fits their needs — no cleanup required.
           </p>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Deliverables</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Deliverables</h3>
 
           <ul className="list-disc list-inside mt-4">
             <li>
@@ -159,7 +163,7 @@ export default function PeersSelectionPage() {
             src="/images/project/screenshot-peers-selection-2.png"
           />
 
-          <h3 className="text-mid text-2xl font-medium mt-8">
+          <h3 className="text-mid text-2xl font-medium mt-14">
             Research & Challenges Identified
           </h3>
 
@@ -234,7 +238,7 @@ export default function PeersSelectionPage() {
             src="/images/project/screenshot-peers-selection-3.png"
           />
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Ideation</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Ideation</h3>
 
           <p className=" mt-4">
             Since we already had a foundational understanding of the features we
@@ -254,7 +258,7 @@ export default function PeersSelectionPage() {
             src="/images/project/screenshot-peers-selection-4.png"
           />
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Design</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Design</h3>
 
           <p className=" mt-4">
             Given that our target audience consists of older-generation
@@ -288,7 +292,7 @@ export default function PeersSelectionPage() {
             </li>
           </ul>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">
+          <h3 className="text-mid text-2xl font-medium mt-14">
             Design Approach:
           </h3>
 
@@ -310,7 +314,7 @@ export default function PeersSelectionPage() {
             src="/images/project/screenshot-peers-selection-5.png"
           />
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Iteration</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Iteration</h3>
 
           <p className=" mt-4">
             As a result of testing, we refined the layout to make the peer
@@ -331,7 +335,7 @@ export default function PeersSelectionPage() {
             src="/images/project/screenshot-peers-selection-6.png"
           />
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Final Design</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Final Design</h3>
 
           <p className=" mt-4">
             In the final design, we prioritised peer groups based on insights
@@ -350,7 +354,7 @@ export default function PeersSelectionPage() {
             src="/images/project/screenshot-peers-selection-7.png"
           />
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Next Steps</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Next Steps</h3>
 
           <p className=" mt-4">
             To ensure continued value and improvement of the peer selection
@@ -377,6 +381,6 @@ export default function PeersSelectionPage() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

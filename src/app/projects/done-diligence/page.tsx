@@ -4,44 +4,63 @@ import ProjectHeader from "@/components/ProjectHeader";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const images = [
   "/images/project/screenshot-dd-1.png",
   "/images/project/screenshot-dd-2.png",
   "/images/project/screenshot-dd-3.png",
+  //"/images/project/screenshot-dd-4.png",
+  //"/images/project/screenshot-dd-5.png",
+  "/images/project/screenshot-dd-6.png",
+  "/images/project/screenshot-dd-7.png",
+  "/images/project/screenshot-dd-8.png",
+];
+
+const instagramImages = [
+  "/images/project/done-dillegence-cards-1.png",
+  "/images/project/done-dillegence-cards-2.png",
+  "/images/project/done-dillegence-cards-3.png",
+  "/images/project/done-dillegence-cards-4.png",
+  "/images/project/done-dillegence-cards-5.png",
 ];
 
 export default function DoneDiligencePage() {
   return (
-    <>
-      <ProjectHeader 
+   <div className="relative">
+    <Link href="/" className="absolute top-8 left-8 z-10">
+      <Image src="/images/icons/home.svg" alt="Back" width={40} height={40} />
+    </Link>
+    <ProjectHeader 
       projectHeading="Building anticipation for a smarter way to handle due diligence"
       projectSubHeading="Done Diligence Teaser Campaign"
       projectTags={["Business Valuation", "Fintech", "B2B | B2C", "Teaser", "GTM", "Product Marketing"]}
       />
        <main className="container mx-auto py-12 px-4 min-h-screen flex flex-col items-center justify-center text-center text-lg">
         <Image
-          width={1118}
-          height={699}
+          width={950}
+          height={499}
           alt="Done Dilligence Screenshot"
           src="/images/project/screenshot-done-dilligence.png"
         />
-        <div id="details" className="flex mt-16 gap-8">
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">ROLE</p>
-            <p>Product Marketing Manager</p>
+        <div id="details" className="flex mt-16 gap-12 max-w-[900px] w-[900px] ">
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">ROLE</p>
+            <p>PMM</p>
+            <p>Product Designer</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TEAM</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TEAM</p>
             <p>Marketing Manager</p>
-            <p>Product Marketing Manager</p>
+            <p>PMM</p>
+            <p>Product Designer</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TOOLS</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TOOLS</p>
             <p>Figma, Canva</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TIMELINE</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TIMELINE</p>
             <p>April – May 2025</p>
           </div>
         </div>
@@ -50,13 +69,13 @@ export default function DoneDiligencePage() {
           id="main"
           className="container mx-auto max-w-[700px] mt-4 text-left text-black"
         >
-          <h2 className="text-mid text-3xl font-medium mt-6">The Challenge</h2>
+          <h2 className="text-mid text-3xl font-medium mt-16">The Challenge</h2>
           <p className=" mt-4">
             We were gearing up to launch Done Diligence, a new feature designed to simplify and guide the due diligence process inside our platform. Given the technical nature of the topic, we knew a traditional product announcement wouldn’t cut through. Instead, we needed a fresh, engaging way to spark curiosity and drive early interest without overwhelming users with detail.
           </p>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">The Goal</h3>
-          <ul className="list-none space-y-2 mt-4">
+          <h3 className="text-mid text-2xl font-medium mt-14">The Goal</h3>
+          <ul className="list-none space-y-2">
             <li className="flex items-start m-0">
               <Image
                 src="/images/icons/checkmark.svg"
@@ -101,36 +120,43 @@ export default function DoneDiligencePage() {
             </li>
           </ul>
 
-          <div className="flex items-center flex-col mt-6">
-
-          
-                 <Image
-                          src="/images/project/done-dillegence-cards-1.png"
-
-                alt="Checkmark"
-                width={686}
-                height={20}
-                
-                className="mr-3 mt-1 flex-shrink-0"
-              />
-
-                 <Image
-                          src="/images/project/done-dillegence-cards-2.png"
-
-                alt="Checkmark"
-                width={460}
-                height={20}
-                
-                className="mr-3 mt-1 flex-shrink-0"
-              />
-              </div>
+          <div id="instagramCarosel" className="relative overflow-hidden mt-14 h-[250px] w-[120%] left-[-10%]">
+            <div className="absolute top-0 left-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <motion.div
+              className="flex "
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                ease: "linear",
+                duration: 10,
+                repeat: Infinity,
+              }}
+            >
+              {[...instagramImages, ...instagramImages].map((src, index) => (
+                <div
+                  key={`insta-card-${index}`}
+                  className="flex-shrink-0 mx-2"
+                >
+                  <Image
+                    src={src}
+                    alt={`Instagram card screenshot ${
+                      (index % instagramImages.length) + 1
+                    }`}
+                    width={220}
+                    height={220}
+                    className=""
+                  />
+                </div>
+              ))}
+            </motion.div>
+            <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          </div>
 
             <h2 className="text-mid text-3xl font-medium mt-6">The Campaign</h2>
-            <h3 className="text-mid text-2xl font-medium mt-8">You’ve done your diligence—now we’ve done it for you.</h3>
+            <h3 className="text-mid text-xl font-medium mt-6">You’ve done your diligence—now we’ve done it for you.</h3>
           <p className=" mt-4">
         To support this message, I developed a multi-channel teaser campaign, including:</p>
 
-         <ul className="list-disc list-inside">
+         <ul className="list-disc list-outside pl-5">
             <li>Homepage Banner: Eye-catching copy with minimal design to hint at what’s coming</li>
             <li>In-App Pop-Up: A short teaser and a blurred sneak peek of the UI</li>
             <li>Sales & CSM Enablement Deck: To support early conversations and internal alignment</li>
@@ -144,10 +170,12 @@ export default function DoneDiligencePage() {
         Each asset was designed to build layered awareness — from light, playful messaging to more in-depth educational content as launch day approached.</p>
 
 
+
           <div
-            id="carousel-container"
-            className="relative w-[120%] left-[-10%] h-[250px] my-8 overflow-hidden rounded-lg shadow-lg"
+            id="marketingCarousel"
+            className="relative w-[120%] left-[-10%] h-[250px] my-8 overflow-hidden  "
           >
+            <div className="absolute top-0 left-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
             <motion.div
               className="flex h-full" // Ensure the track uses full height of the aspect ratio container
               initial={{ x: "0%" }}
@@ -162,24 +190,26 @@ export default function DoneDiligencePage() {
               {[...images, ...images].map((src, index) => (
                 <div
                   key={`marquee-image-${index}`}
-                  className="relative w-full h-full flex-shrink-0"
-                  style={{ flexBasis: "100%" }} // Each image container takes full width of the carousel-container
+                  className="relative h-full flex flex-shrink-0 items-center"
+                  
+                  
                 >
                   <Image
                     src={src}
                     alt={`Virtual Tour Screenshot ${
                       (index % images.length) + 1
                     }`}
-                    layout="fill"
-                    objectFit="contain" // Ensures the whole image is visible within its 16/9 container
-                    className="rounded-lg"
+                    className="pr-3"
+                    width={index === 2 ? 540 : 340}
+                    height={174}
                   />
                 </div>
               ))}
             </motion.div>
+            <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
           </div>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">The Results</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">The Results</h3>
 
           <ul className="list-disc list-inside">
             <li>65%+ open rate on the teaser email</li>
@@ -201,10 +231,10 @@ export default function DoneDiligencePage() {
 
 
 
-          <h3 className="text-mid text-2xl font-medium mt-8">What I Learned</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">What I Learned</h3>
 
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Speak to the Problem, Not the Product</h3>
+          <h3 className="text-mid text-xl font-medium mt-6">Speak to the Problem, Not the Product</h3>
           <p className=" mt-4">
             This campaign reinforced the importance of meeting professionals where they are — with messaging that’s clear, confident, and rooted in solving real business problems. Rather than overloading users with technical detail, we focused on the value of the solution and the pain it removes.
           </p>
@@ -221,6 +251,6 @@ export default function DoneDiligencePage() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -20,7 +20,8 @@ const textLine2Variants = {
   hover: {
     opacity: 1,
     height: "auto",
-    marginTop: "1rem", 
+    marginTop: 0,
+    
     transition: { duration: 0.3, ease: "easeInOut" },
   },
 };
@@ -37,17 +38,18 @@ export default function ProcessCard({ title, text, number, text_line_2 }: Proces
         <h4
           // text-white class removed, color is handled by subtitleVariants
           className="text-lg font-bold mb-1 text-dark"
+
         >
           {title}
         </h4>
-        <p className="text-dark hei">
-          {text}
+        <p className="text-dark hei" dangerouslySetInnerHTML={{ __html: text }}>
+          
         </p>
         <motion.p
           className="text-dark hei"
           variants={textLine2Variants}
+           dangerouslySetInnerHTML={{ __html: text_line_2 }}
         >
-          {text_line_2}
         </motion.p>
         {number == 1 && (
           <div className="absolute top-2 right-6">
@@ -78,7 +80,7 @@ export default function ProcessCard({ title, text, number, text_line_2 }: Proces
               <Image src="/elements/element_2.png" alt="" width={300} height={300} />
             </div> */}
       </div>
-      <div id="number" className="text-7xl pl-5 text-black text-bold">
+      <div  id="number" className="text-7xl pl-5 text-black text-bold absolute  right-6">
         {'0' + number.toString()}
       </div>
     </motion.div>

@@ -40,12 +40,12 @@ export default function ProjectHeader({
             <Image src="/images/project/valutico.png" alt="Valutico Logo" width={140} height={19} />
 
             { projectSubHeading && (
-                <p className="text-xl mb-3 text-mid leading-14 mt-5" >
+                <p className="text-2xl mb-0 text-mid leading-14 mt-5" >
               {projectSubHeading}
             </p>
             )}
             
-            <p className={`text-5xl mb-3 text-black leading-13 font-normal  ${projectSubHeading ? 'mt-1' : 'mt-5'} `} dangerouslySetInnerHTML={{ __html: projectHeading }} />
+            <p className={`text-5xl mb-3 text-black leading-13 font-normal  ${projectSubHeading ? 'mt-0' : 'mt-5'} `} dangerouslySetInnerHTML={{ __html: projectHeading }} />
             
             <div className="flex items-center gap-3 font-medium mt-12 text-lg text-black flex-wrap" > {/* Added flex-wrap for multiple tags */}
               {projectTags.map((tag, index) => (

@@ -39,26 +39,26 @@ export default function VirtualTourPage() {
           src="/images/project/screenshot-virtual-tour.png"
         />
         <div id="details" className="flex mt-16 gap-8">
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">ROLE</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">ROLE</p>
             <p>Product Designer</p>
             <p>Product Marketing Manager</p>
             <p>(Strategy → Design → Execution)</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TEAM</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TEAM</p>
             <p>VP Marketing</p>
             <p>Product Designer /</p>
             <p>Product Marketing Manager</p>
             <p>Front-end Engineer</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TOOLS</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TOOLS</p>
             <p>Figma, Navattic</p>
             <p>Salesforce, Calendy</p>
           </div>
-          <div className="w-1/4 text-lg text-black text-left">
-            <p className="text-mid">TIMELINE</p>
+          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
+            <p className="text-mid font-medium mb-2">TIMELINE</p>
             <p>January – March 2025</p>
           </div>
         </div>
@@ -67,14 +67,14 @@ export default function VirtualTourPage() {
           id="main"
           className="container mx-auto max-w-[700px] mt-4 text-left text-black"
         >
-          <h2 className="text-mid text-3xl font-medium mt-6">Goal</h2>
+          <h2 className="text-mid text-3xl font-medium mt-16">Goal</h2>
           <p className=" mt-4">
             To create a self-serve, interactive product tour that improves
             product comprehension, drives qualified sign-ups, and enables Sales
             with a consistent, scalable story.
           </p>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Problem</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Problem</h3>
           <p className=" mt-4">
             Valutico was evolving from a Sales-led approach into a more scalable
             Sales-assisted + Product-led growth model. Until this point, most
@@ -98,7 +98,7 @@ export default function VirtualTourPage() {
             our typical sales touchpoints.
           </p>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Objectives</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Objectives</h3>
           <ul className="list-none space-y-2 mt-4">
             <li className="flex items-start m-0">
               <Image
@@ -146,7 +146,7 @@ export default function VirtualTourPage() {
 
           <h2 className="text-mid text-3xl font-medium mt-12">Process</h2>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">
+          <h3 className="text-mid text-2xl font-medium mt-14">
             Product Marketing Lens
           </h3>
           <p className="mt-4">
@@ -218,7 +218,7 @@ export default function VirtualTourPage() {
             </motion.div>
           </div>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">
+          <h3 className="text-mid text-2xl font-medium mt-14">
             Product Designer Lens
           </h3>
           <p className="mt-4">
@@ -261,7 +261,7 @@ export default function VirtualTourPage() {
             />
           </div>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">
+          <h3 className="text-mid text-2xl font-medium mt-14">
             Collaboration & Tools
           </h3>
           <p className="mt-4">Who you worked with:</p>
@@ -285,7 +285,7 @@ export default function VirtualTourPage() {
             />
           </div>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">
+          <h3 className="text-mid text-2xl font-medium mt-14">
             Outcome & Impact
           </h3>
           <p className="mt-4">
@@ -301,7 +301,7 @@ export default function VirtualTourPage() {
             <li>Sales team shortened pitch time by 15 minutes</li>
           </ul>
 
-          <h3 className="text-mid text-2xl font-medium mt-8">Reflection</h3>
+          <h3 className="text-mid text-2xl font-medium mt-14">Reflection</h3>
           <p className="mt-4">What I learned</p>
           <ul className="list-disc list-outside ml-4">
             <li>

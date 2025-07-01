@@ -8,11 +8,13 @@ export default function About() {
           </div>
           <div className="md:w-3/4 text-left">
             <p className="text-lg text-black mb-4">
-I’m a <b>Product Designer</b> & <b>Product Marketing Manager</b> based in Vienna, Austria, with 15+ years creating digital products that are both beautifully designed and truly useful. I work at the intersection of UX, product strategy, and go-to-market, turning complex ideas into simple, scalable solutions. From onboarding flows that cut support to launches that drive adoption.
+              I’m a <span className="font-semibold">Product Designer</span> & <span className="font-semibold">Product Marketing Manager</span> with 15+ years of experience building digital products that are not just beautifully designed, but genuinely useful.
             </p>
             <p className="text-lg text-black mb-4">
-              I bring a user-centered approach that aligns product vision with business goals.
-If you’re building something meaningful and want a cross-functional thinker fluent in design and strategy, let’s connect.
+              I work at the <span className="font-semibold">intersection of UX</span>, <span className="font-semibold">product strategy,</span> and <span className="font-semibold">go-to-market</span>, turning complex ideas into intuitive, scalable solutions. From onboarding flows that reduce support load to GTM launches that boost feature adoption, I bring a <span className="font-semibold">holistic</span>, <span className="font-semibold">user-centered</span> approach that connects <span className="font-semibold">product vision</span> with <span className="font-semibold">business results</span>.
+            </p>
+            <p className="text-lg text-black mb-4">
+              I believe good design is about how it works and how it helps. If you&apos;re building something meaningful and need a <span className="font-semibold">cross-functional thinker</span> who speaks both design and strategy, I’d love to connect.
             </p>
           </div>
         </div>

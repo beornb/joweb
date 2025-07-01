@@ -2,20 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { useEffect, useRef } from "react";
 
-export default function Header() {
+
+export default function Contact() {
   const shouldReduceMotion = useReducedMotion();
   const transitionDuration = shouldReduceMotion ? 0 : 0.3;
 
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5;
-    }
-  }, []);
-
+  
   const slidingBgVariants = {
     initial: { x: "100%" }, // Start off-screen to the right
     hover: { x: "0%" },     // Slide in from the right
@@ -31,70 +24,33 @@ export default function Header() {
     hover: { backgroundColor: "var(--color-white)" },
   };
 
-  const greetingText = "Hello, I’m Jo-Ann.";
-  const sentenceVariants = {
-    hidden: { opacity: 1 }, // Parent is visible
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0.5, // Optional delay before animation starts
-        staggerChildren: shouldReduceMotion ? 0 : 0.05, // Time between each letter appearing
-      },
-    },
-  };
-
-  const letterVariants = {
-    hidden: { opacity: 0, y: 10 }, // Start invisible and slightly down
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: shouldReduceMotion ? 0 : 0.1, // Faster individual letter animation
-      },
-    },
-  };
-
-
+  
   return (
-    <header  className="header-height flex p-8 md:pt-14 md:pb-14 lg:pt-30 lg:pb-30 relative overflow-hidden flex"  >
-        <video ref={videoRef} autoPlay loop muted playsInline  className="video-background">
-          <source src="/video/bg_rosegold.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    <section className="w-full mt-24">
+      <div className="container mx-auto max-w-[950px]">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/4 text-center md:text-left">
+            <h2 className="text-2xl font-medium mb-6 md:mb-0">Let&apos;s work together!</h2>
+          </div>
+                
 
-
-      <div id="container" className="container mx-auto max-w-[950px] bg-white/80 rounded-2xl border-light  p-12">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-
-          <div className="flex-grow text-center md:text-left">
-            <motion.h2
-              className="text-lg mb-2 font-medium text-mid"
-              variants={sentenceVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {greetingText.split("").map((char, index) => (
-                <motion.span key={char + "-" + index} variants={letterVariants}>
-                  {char}
-                </motion.span>
-              ))}
-            </motion.h2>
-            <p className="text-5xl mb-3 text-black leading-14" >
-              I blend <span className="text-mid">UX insight</span> with <span className="text-mid">marketing intuition</span> to craft products that delight users and fuel growth.
+          <div
+            id="ContactSection"
+            className="border-3 border-(--dark-beige) bg-(--light-beige) p-6 rounded-3xl  w-full flex justify-between items-center pt-8 pb-8 relative overflow-hidden"
+            style={{
+              backgroundImage: "url('/elements/element_2.png')",
+              backgroundPosition: 'calc(100% + 60px) calc(100% + 40px)',
+              backgroundRepeat: 'no-repeat',
+               backgroundSize: '300px'
+            }}
+          >
+            <div>
+            <p className="mb-2 text-5xl text-black leading-14"> 
+              Have a project in mind?
             </p>
-            <div className="flex items-center gap-3 font-medium mt-8 text-lg text-black" >
-              <p>
-                Product Marketing       
-              </p>
-              <div className="w-[3px] h-[3px] rounded-full bg-[var(--rose-gold-bg-mid)]"></div>
-              <p>
-                Product Design 
-              </p>
-              <div className="w-[3px] h-[3px] rounded-full bg-[var(--rose-gold-bg-mid)]"></div>
-              <p>
-                Customer Success
-              </p>
-            </div>
+            <p className="mb-12 text-3xl   text-mid "> 
+             Let&apos;s talk.
+             </p>
             <div className="flex gap-5  mt-8">
               <Link href="mailto:hello@joannb.com?subject=Hello&nbsp;Jo" passHref>
                 <motion.div // Changed from div to a for semantic linking with Framer Motion
@@ -130,7 +86,7 @@ export default function Header() {
                   </div>
                 </motion.div>
               </Link>
-              <Link href="https://www.linkedin.com/in/joannbishop/" target="_blank">
+                            <Link href="https://www.linkedin.com/in/joannbishop/" target="_blank">
                 <motion.div // Changed from div to a for semantic linking with Framer Motion
                   className="relative overflow-hidden flex items-center rounded-full border-2 border-black bg-black pl-6 gap-3 cursor-pointer no-underline" // Added no-underline
                   initial="initial"
@@ -163,12 +119,12 @@ export default function Header() {
                   </div>
                 </motion.div>
               </Link>
-
-            </div>
-            
+              </div>
+              </div>
+           
           </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 }

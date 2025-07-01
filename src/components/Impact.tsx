@@ -17,7 +17,7 @@ export default function Impact() {
           <div className="md:w-3/4 text-left flex gap-5 relative flex-col md:flex-row"> {/* Added relative positioning context */}
             <ImpactCard title="15+" subtitle="Years Experience" text="Bridging product design, strategy & marketing across SaaS and B2C & B2B."></ImpactCard>
             <ImpactCard title="6+" subtitle="Trusted Teams" text="Partnered with Product, Engineering, CS, and Marketing on key launches."></ImpactCard>
-            <ImpactCard title="30%" subtitle="Time to Market" text="Led quarterly release cycles with cross-functional alignment." extraLine={true}></ImpactCard>
+            <ImpactCard title="30%" subtitle="Faster TTM" text="Led quarterly release cycles with cross-functional alignment." extraLine={true}></ImpactCard>
             
             <MotionImage
               src="/elements/element_3.png"

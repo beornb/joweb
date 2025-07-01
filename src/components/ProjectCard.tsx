@@ -17,20 +17,25 @@ interface ProjectCardProps {
 export default function ProjectCard({
   title,
   subtitle,
-  text,
-  text2,
   projectLink, // Destructure projectLink
   no,
   className,
   color,
 }: ProjectCardProps) {
   const baseClassName =
-    "border-3 border-(--rose-gold-fg-dark) p-6 rounded-3xl shadow-md";
+    " rounded-xl shadow-md";
   const textColorClass = color === "white" ? "text-white" : "text-black";
   const dynamicStyles = {
     backgroundImage: `url('/images/project/p${no}-bg.svg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    width: '328px',
+    
+    height: no == 1 ? '600px' : '290px'
+
+    
+    
+    
   };
 
   const imageVariants = {
@@ -63,50 +68,65 @@ export default function ProjectCard({
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className={`${baseClassName} ${className || ""} cursor-pointer`.trim()}
-      style={dynamicStyles}
+      
+      
+      
     >
-      <Link href={projectLink}>
-        <h3 className={`text-2xl font-semibold mb-2   ${textColorClass}`}>
+      <Link href={projectLink} >
+      <motion.div
+      id='background'
+      className={`${baseClassName} ${className || ""} absolute cursor-pointer`.trim()}
+        style={dynamicStyles} 
+        variants={imageVariants}
+      >
+
+      </motion.div>
+
+      <div className='p-6'>
+
+      
+        <div className='absolute'>
+        <h3 className={` text-3xl font-semibold  ${textColorClass}`} >
           {title}
         </h3>
 
-        <h4 className={`text-lg font-bold mb-1 ${textColorClass}`}>
+        <h4 className={`text-lg ${textColorClass}`}>
           {subtitle}
         </h4>
-        <div className="flex flex-col items-center">
-          {text && <p className={`text-lg ${textColorClass} `}>{text}</p>}
+        </div>
+        <div className="flex flex-col items-center mt-23">
+          <div className='mt-30'>
+
+          </div>
+          {/* {text && <p className={`text-lg ${textColorClass} `}>{text}</p>}
           {text2 && (
             <p
-              className={`text-4xl ${textColorClass} text-center mt-10 mb-10 `}
+              className={`text-4xl ${textColorClass} text-center mb-10 `}
             >
               {text2}
             </p>
-          )}
+          )} */}
 
           <div className="relative mt-4 w-full">
-            <motion.img
-              src={`/images/project/p${no}-img.png`}
+            {/* <motion.img
+              src={`/images/project/p${no}-bg.png`}
               alt={`Project illustration ${no}`}
               className="w-full"
               variants={imageVariants}
-            />
-            <motion.img
-              src={`/images/project/p${no}-logo.png`}
-              alt={`Project logo ${no}`}
-              className="w-25 mx-auto mt-4"
-              variants={imageVariants}
-            />
+            /> */}
+
             <motion.div
-              className="absolute inset-0 flex items-end justify-end p-4"
+              className={`absolute inset-0 flex items-end justify-end p-4 ${no=== 1 ? 'mt-75' : ''} `}
               variants={buttonContainerVariants}
             >
-              <button className="px-6 py-3 cursor-pointer bg-(--rose-gold-bg-light) bg-opacity-50	 text-mid rounded-full font-semibold shadow-lg hover:bg-(--rose-gold-pale-pink) transition-colors">
-                View Project
+              <button className="px-6 py-3 cursor-pointer bg-(--rose-gold-bg-light) bg-opacity-90	 text-mid rounded-full font-semibold shadow-lg hover:bg-(--rose-gold-pale-pink) transition-colors">
+                {projectLink == '#' ? 'Coming Soon' : "View Project"}
               </button>
             </motion.div>
           </div>
         </div>
+      
+      </div>
       </Link>
     </motion.div>
   );

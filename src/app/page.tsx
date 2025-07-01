@@ -7,6 +7,10 @@ import Impact from "@/components/Impact";
 import Trusted from "@/components/Trusted";
 import Process from "@/components/Process";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Testimonials from "@/components/Testimonials";
+
+
 
 export default function Home() {
 
@@ -28,6 +32,10 @@ export default function Home() {
           <Process />
 
           <Projects />
+
+          <Testimonials />
+
+          <Contact />
         </main>
 
         <Footer />
