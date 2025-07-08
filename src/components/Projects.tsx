@@ -71,10 +71,10 @@ export default function Projects() {
             </div>
             
 
-            <h3 className=" text-2xl font-medium mt-14">
+            <h3 className=" text-2xl font-medium mt-14 text-left">
               Every project leaves a mark.
             </h3>
-            <p className=" mt-4 text-black">
+            <p className=" mt-4 text-black text-left">
               Here’s a look back at some of my earlier work, from client
               projects to creative experiments. While tools and trends have
               changed, my approach has always been rooted in empathy, clarity,
