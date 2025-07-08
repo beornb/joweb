@@ -63,7 +63,7 @@ export default function Header() {
         </video>
 
 
-      <div id="container" className="container mx-auto max-w-[950px] bg-white/80 rounded-2xl border-light  p-12">
+      <div id="container" className="container mx-auto max-w-[950px] bg-white/80 rounded-2xl border-light p-12">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
 
           <div className="flex-grow text-center md:text-left">

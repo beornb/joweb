@@ -3,19 +3,25 @@
 import ProjectHeader from "@/components/ProjectHeader";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import Carousel from "@/components/Carousel";
 import Link from "next/link";
 
 const images = [
   "/images/project/screenshot-dd-1.png",
   "/images/project/screenshot-dd-2.png",
   "/images/project/screenshot-dd-3.png",
-  //"/images/project/screenshot-dd-4.png",
-  //"/images/project/screenshot-dd-5.png",
   "/images/project/screenshot-dd-6.png",
   "/images/project/screenshot-dd-7.png",
   "/images/project/screenshot-dd-8.png",
 ];
+const imageWidths = [
+  333,
+  333,
+  549,
+  463,
+  463,
+  463
+]
 
 const instagramImages = [
   "/images/project/done-dillegence-cards-1.png",
@@ -120,36 +126,7 @@ export default function DoneDiligencePage() {
             </li>
           </ul>
 
-          <div id="instagramCarosel" className="relative overflow-hidden mt-14 h-[250px] w-[120%] left-[-10%]">
-            <div className="absolute top-0 left-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <motion.div
-              className="flex "
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                ease: "linear",
-                duration: 10,
-                repeat: Infinity,
-              }}
-            >
-              {[...instagramImages, ...instagramImages].map((src, index) => (
-                <div
-                  key={`insta-card-${index}`}
-                  className="flex-shrink-0 mx-2"
-                >
-                  <Image
-                    src={src}
-                    alt={`Instagram card screenshot ${
-                      (index % instagramImages.length) + 1
-                    }`}
-                    width={220}
-                    height={220}
-                    className=""
-                  />
-                </div>
-              ))}
-            </motion.div>
-            <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-          </div>
+          <Carousel imageWidths={250} images={instagramImages} duration={instagramImages.length * 7} className="mt-14 h-[250px] w-[120%] left-[-10%]" />
 
             <h2 className="text-mid text-3xl font-medium mt-6">The Campaign</h2>
             <h3 className="text-mid text-xl font-medium mt-6">You’ve done your diligence—now we’ve done it for you.</h3>
@@ -169,45 +146,14 @@ export default function DoneDiligencePage() {
                     <p className=" mt-4">
         Each asset was designed to build layered awareness — from light, playful messaging to more in-depth educational content as launch day approached.</p>
 
-
-
-          <div
-            id="marketingCarousel"
-            className="relative w-[120%] left-[-10%] h-[250px] my-8 overflow-hidden  "
-          >
-            <div className="absolute top-0 left-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <motion.div
-              className="flex h-full" // Ensure the track uses full height of the aspect ratio container
-              initial={{ x: "0%" }}
-              animate={{ x: `-${images.length * 100}%` }}
-              transition={{
-                ease: "linear",
-                duration: images.length * 14, // Adjust duration for scroll speed (e.g., 7 seconds per image)
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-            >
-              {[...images, ...images].map((src, index) => (
-                <div
-                  key={`marquee-image-${index}`}
-                  className="relative h-full flex flex-shrink-0 items-center"
-                  
-                  
-                >
-                  <Image
-                    src={src}
-                    alt={`Virtual Tour Screenshot ${
-                      (index % images.length) + 1
-                    }`}
-                    className="pr-3"
-                    width={index === 2 ? 540 : 340}
-                    height={174}
-                  />
-                </div>
-              ))}
-            </motion.div>
-            <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-          </div>
+          <Carousel
+            images={images}
+            duration={images.length * 8}
+            className="w-[120%] left-[-10%] h-[250px] my-8"
+            motionDivClassName="h-full"
+            imageWidths={imageWidths}
+          />
+          
 
           <h3 className="text-mid text-2xl font-medium mt-14">The Results</h3>
 

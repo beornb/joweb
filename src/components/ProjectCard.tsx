@@ -28,14 +28,8 @@ export default function ProjectCard({
   const dynamicStyles = {
     backgroundImage: `url('/images/project/p${no}-bg.svg')`,
     backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: '328px',
-    
-    height: no == 1 ? '600px' : '290px'
-
-    
-    
-    
+    backgroundPosition: 'bottom',
+    width: '328px'
   };
 
   const imageVariants = {
@@ -75,7 +69,7 @@ export default function ProjectCard({
       <Link href={projectLink} >
       <motion.div
       id='background'
-      className={`${baseClassName} ${className || ""} absolute cursor-pointer`.trim()}
+      className={`${baseClassName} ${className || ""} absolute cursor-pointer h-[290px] ${no === 1 ? 'lg:h-[600px]' : ''}`.trim()}
         style={dynamicStyles} 
         variants={imageVariants}
       >
@@ -116,7 +110,7 @@ export default function ProjectCard({
             /> */}
 
             <motion.div
-              className={`absolute inset-0 flex items-end justify-end p-4 ${no=== 1 ? 'mt-75' : ''} `}
+              className={`absolute inset-0 flex items-end justify-end p-4 ${no=== 1 ? 'lg:mt-75' : ''} `}
               variants={buttonContainerVariants}
             >
               <button className="px-6 py-3 cursor-pointer bg-(--rose-gold-bg-light) bg-opacity-90	 text-mid rounded-full font-semibold shadow-lg hover:bg-(--rose-gold-pale-pink) transition-colors">

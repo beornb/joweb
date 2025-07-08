@@ -1,0 +1,784 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Nedbank Design System </title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FWLKRCYWT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9FWLKRCYWT');
+    </script>
+<style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1bca2547-b7ac-47a1-b7b4-9857a856c4dd" class="page sans"><header><img class="page-cover-image" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/bg-imagery.jpeg" style="object-position:center 93.71000000000001%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/logo-white.svg"/></div><h1 class="page-title">Nedbank Design System </h1></header><div class="page-body"><p id="ac6cf712-4f02-44e3-b523-e787a5c79b34" class=""><mark class="highlight-gray">Our aim is to have a single site where new and existing clients can browse and manage all their financial requirements, securely. This site will have tailored content and will promote consistent brand engagement.</mark></p><p id="86231464-6f5d-425d-8ba3-7ce2d1597832" class=""><mark class="highlight-gray">The goal is firstly, to reduce the friction that users currently experience when interacting with the brand and, secondly, to allow us to deliver a superior product that meets the user’s every need.</mark></p><p id="19139fee-c35a-4437-8394-8daf3b377816" class="block-color-gray">This <mark class="highlight-gray">is our North Star, as a collective we align to it to ensure that we deliver the best experience for our customers.</mark></p><p id="869504a3-18fe-4164-b38b-d046251d5e65" class="">
+</p><p id="f2adb319-3c6d-4855-8d57-63fae7510fde" class="">
+</p><hr id="cdc5597a-751e-49a8-b970-11b6b6fe3de2"/><p id="c099868b-9f88-414d-a084-27e10a04a0ef" class="">
+</p><h3 id="be2c66fa-f250-4445-a4b4-de3596f958d3" class="">Nedbank Design System 2019</h3><p id="25524950-a601-4c0b-a666-871880fbc2ad" class="block-color-gray">Building the Nedbank Design System was an ongoing project</p><p id="293115a3-1e4e-4705-8dee-5ab5c6b4be9b" class="">
+</p><p id="b040772d-859e-4afd-bc24-626ecb3765c5" class="">
+</p><p id="4eda050f-45a4-40e7-8130-958c299e8adf" class="">
+</p><figure id="916f0b83-4edb-4cfc-bf1d-5f70fb5a90f0" class="image"><a href="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_08.53.51.png"><img style="width:2126px" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_08.53.51.png"/></a></figure><p id="cc626ae2-575b-4b83-b750-2865ce28d650" class="">
+</p><p id="27457886-e241-42d2-8405-535a4ebb6bc7" class="">
+</p><h3 id="1fb9b021-b67e-4cb2-9f99-572d767a66f8" class=""><strong>My role</strong></h3><p id="c07874f3-f249-47ad-a425-c76dd7d162a9" class="block-color-gray">I was assigned as the Design Systems full time UX/UI resource.
+Our team consisted of 3 UX/UI Designers, 4 Front-end Developers and a Creative Director.</p><p id="62d5c1e0-568d-4813-8075-cc51b4790bb0" class="">
+</p><h3 id="99c4005e-51f6-4a9f-b602-023996bc3fcb" class=""><strong>Project Summary</strong></h3><p id="c756344c-4137-4b2f-98bb-3cb09a8ff491" class="block-color-gray">The bank was on a drive to digital transformation. With that the bank had invested in various initiatives, which resulted in various teams being born each with its own mission of taking the old manual processes which did not serve the customers nor the business and transforming them into digital, secure, profitable and most of all useful features and services.</p><p id="e1f5a3a0-524c-4a26-a4cb-a97e60bfbc56" class="">
+</p><h3 id="d1bdd7ec-6537-43ca-8470-2d4e2f86494c" class=""><strong>The Problem</strong></h3><p id="9fc7ff9e-54bd-4aa0-aab9-b7cd6adc294c" class="block-color-gray">Nedbank Design had only a handful of designers, manually sharing files and duplicating components which led to inconsistent and fragments experiences. The team was rapidly growing and the bank was in need of a design system as its source of truth. </p><p id="63e239b2-95b2-411e-ae5e-b84588e33839" class="">
+</p><h2 id="3598a8ee-4721-423b-bfd3-95fd89b65703" class="block-color-teal">Creating a Design System | Phase 1</h2><h3 id="4453f529-cc19-4897-8e67-03c441089ac0" class="">Setting up the foundations of the Design System.</h3><p id="a805187d-4336-412c-b9cf-8abda707fdb8" class="">
+</p><ul id="f5477e3a-319f-4d1c-b908-fc9b00663fdd" class="block-color-gray bulleted-list"><li style="list-style-type:disc">Who would use our Design System?
+
+<em>Design and Engineering but soon enough it would be a resource or the whole organisation. One Design Language</em>
+</li></ul><ul id="4512db6b-8c20-4ed2-a237-373c1abd4159" class="block-color-gray bulleted-list"><li style="list-style-type:disc">Who would be the stakeholders represented our Design System?</li></ul><p id="cb30b48f-e63e-4c63-9be4-a6f1cfaac9bd" class="block-color-gray">        
+   <em>   Nedbank Brand and Marketing, UX Writing, Design and Engineering</em>
+</p><ul id="a16c7d32-74a9-4cde-ba70-3202a8e86650" class="block-color-gray bulleted-list"><li style="list-style-type:disc">What was the core value to our users?
+
+Our Design System would create a cohesive design experience in the bank and free up time
+and budget for squads to design, test and iterate quickly and constantly.</li></ul><p id="00fb0cc3-eb01-4d0d-9436-cb215741ed84" class="">
+</p><h3 id="e3274757-5853-4a1c-9460-ef111c41f9db" class="">Setting up and Onboarding Designers and Developers.</h3><p id="914abe60-2aa5-4a6a-aaef-15e51dde8f55" class="">
+</p><p id="995564ae-dff6-4e8d-a475-844eea91b180" class="block-color-gray">At the very start we decided to create sections in the Design System for easy onboarding and
+setting up.
+
+With these pages designers and engineers could know which tools they need, how to set them up and how to get working easily.
+
+This page also served as a  reference to other designers and engineers to visit again in
+case they needed it.</p><p id="9b51f79b-a191-494c-a695-c596b0f21fdf" class="">
+</p><p id="273d22c9-feaa-4290-b303-da082a2aea76" class="block-color-teal"><strong>Designer</strong></p><figure id="4ed3da72-aafb-49ce-a49a-1a62bbd23202" class="image"><a href="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.23.20.png"><img style="width:1645px" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.23.20.png"/></a></figure><p id="87013761-9773-4628-8a8b-198461a4ac49" class="">
+</p><p id="9f15d9ed-cfbb-42cd-b184-d6bb5ae57a58" class="block-color-teal"><strong>Engineer</strong></p><figure id="05f5cc81-eff2-48fc-a235-5119212be1bc" class="image"><a href="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.24.23.png"><img style="width:1640px" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.24.23.png"/></a></figure><p id="bda64f19-a2c0-4d21-89a0-8e274646cbac" class="">
+</p><p id="3636147b-e5ac-4e05-b407-a246729e3edd" class="">
+</p><h3 id="b65d8383-7688-464c-85ec-efac57209b8c" class="">Structuring Components</h3><p id="f185eb1b-0ba2-404c-9422-71e1973e109a" class="block-color-gray">
+We created a library of elements, components and templates for designers to have the right
+tools with which to design.</p><p id="d9e36b57-c10f-46fe-80c7-448848c242a5" class="">
+<strong>The process was:</strong></p><p id="44283ba5-cde9-47b3-8898-22f3d292f7db" class="block-color-gray">
+A complete Component Audit. We gathered various design files from designers all over the bank
+and had a look at all the components, layouts and styles used across all the products as
+everything was extremely fragmented.</p><p id="24edf579-2199-4e1d-9643-5170f33124cc" class="block-color-gray">
+We interviewed designers to find out what their pain points were, where they got their last design file from, why certain decisions were made and who allowed for it. What was their current team
+dynamic and how it influenced their work and creative output?</p><p id="ddb33df9-d107-4d0a-86c7-fc4e42763d16" class="block-color-gray">
+We interviewed engineers to find out what their pain points were. Did they have a central
+repository to work from? Were there multiple versions of the same page or component coded?
+Was there a coding standard? We noticed the same components being coded by various teams
+across various engineering houses.</p><p id="d1b646ab-fd28-48aa-a52c-597ebd7ca8f0" class="">
+</p><p id="d9a26e0e-e7e0-448f-ba0d-d6e3148e2d5e" class="">
+</p><h2 id="eb8610c8-0205-45b0-8826-93881e15db00" class="block-color-teal">Creating a Design System | Phase 2</h2><p id="5a621954-f872-4b06-980d-b96864b9f1d8" class="block-color-gray">
+Next I was teamed up with a fellow UX designer and together we did another round of interviews with designers and engineers, but this time with the intention of learning about them, what they stand for, what they were working on, and lastly their way of working.</p><p id="1fedde7a-e5cd-4fea-9d84-9b9658cff76d" class="">
+</p><p id="20ef7fbf-6673-4025-83bc-3f3243b17b28" class=""><strong>We created a set of Principles for Design.</strong>  <a href="http://design.nedbank.co.za/docs/principles/design.html">http://design.nedbank.co.za/docs/principles/design.html</a></p><p id="7a3a789d-5e70-4a50-be53-2225783cdebc" class="">
+</p><p id="c07ebdc3-f4c4-4c4e-950f-3a191ca06380" class=""><strong>Core principles</strong></p><p id="abccaf37-99aa-4c70-b21b-4d867f127453" class="block-color-gray">Based on the bank’s vision and mission and understanding of customer needs, the design
+team created design principles.</p><p id="92ca0aec-13b1-455a-8771-2af8ffe8df34" class="">
+</p><ul id="0b64050a-8fd9-4843-be06-84fc51877e45" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Know who you’re designing for</mark></li></ul><ul id="c3bac3e6-2e47-421e-b3f1-6d8f1e4876f3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Deliver a consistent, unified experience</mark></li></ul><ul id="0b922f36-d90a-4b30-af06-e550e0ae1247" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Design with modules</mark></li></ul><ul id="85637ee3-017f-404e-aa89-76eaf98ef2c7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Build the right product for the right people</mark></li></ul><p id="45b90eba-b100-4bb8-be85-6cb9ff2402cd" class="">
+</p><p id="dba344d3-2c42-4a99-9d0b-21ba2e054aae" class=""><strong>Design principles</strong></p><p id="28c6b7e2-6725-4fac-a49c-e6f8b2ff0f2d" class="block-color-gray">Principles enable designers and developers to speak the same language during idea
+generation and quality checking of designs.</p><p id="4f22cf23-a70a-4d28-b200-d0b37b781d86" class="">
+</p><ul id="2427e801-fbe4-4483-bf07-eff19162f299" class="block-color-gray bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Provide feedback in context</mark></li></ul><ul id="b16f3213-c0e9-4845-b9e8-a17ed39dea58" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Display secondary content independently</mark></li></ul><ul id="47cb06d7-5888-41cc-bf45-af2d548de01d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Show users only what’s necessary</mark></li></ul><ul id="17c584d3-d6b5-486f-a4c6-6926904467c4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Prevention is better than cure</mark></li></ul><ul id="9ba16da5-5995-40ae-9e64-7cdce8efc3ea" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Help users recover from errors</mark></li></ul><ul id="4e9d3564-a20b-4471-9d9a-c256d6ae6485" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Edit in context</mark></li></ul><ul id="d3a2243d-b1ca-43e7-98ce-d5e730204718" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Provide a sense of control</mark></li></ul><p id="f4087ea2-4fa2-4549-a692-ef0973f34f91" class="">
+</p><p id="dcbd6258-b67e-4b9a-ba96-761b327b4e68" class=""><strong>Design Process</strong></p><p id="3e3b15e7-d9e2-4842-9379-755caab69bae" class="block-color-gray">
+We revisited all the internal processes with an experience mindset how can we make our designers and engineers have great working experience as they were in high pressured situations with tight deadlines and budgets.</p><p id="fd1038ca-cdff-42f4-9e44-64a3029e2b4a" class="">
+</p><figure id="53fd35f0-c0c2-401f-ab6e-e171ef3a92bf" class="image"><a href="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.50.31.png"><img style="width:1601px" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.50.31.png"/></a></figure><p id="a806b550-0cc8-431d-a998-c811d4a58f4a" class="">
+</p><p id="4829d2de-c87f-44cc-8236-404f8e5098b6" class="">
+</p><p id="cdcc49ad-113e-4f73-80ae-1526aa220b6e" class=""><strong>Usability Rules
+</strong><a href="http://design.nedbank.co.za/docs/components/alert-block.html">http://design.nedbank.co.za/docs/components/alert-block.html</a></p><p id="e541884b-d9b0-4319-bb29-5ff56481216b" class="">
+<mark class="highlight-gray">Working with Golden standards and a lot of research and help from highly accredited sources,
+we set about creating UX rules and guidelines for every component with recommendations of
+what would deliver the best experience to the user when using the banking product.</mark></p><p id="debc58e6-52c6-4be0-b516-0f4867183fbf" class=""><mark class="highlight-gray">
+We also included behavioural rules for each component to ensure that the feedback the user
+gets is correct for the task he is trying to complete. We wanted to make sure that every aspect of
+a seamless experience is ensured.</mark></p><p id="7bf785c9-e903-48c4-8b09-a4631738548b" class="">
+</p><figure id="84dafb84-beb0-4b35-b011-7403e756413d" class="image"><a href="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.53.29.png"><img style="width:1580px" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.53.29.png"/></a></figure><p id="c6de6f2d-c57c-4316-991b-055b09d6533a" class="">
+</p><figure id="a4ac180c-7eb9-4fc7-8b83-34eae647f83f" class="image"><a href="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.55.03.png"><img style="width:1359px" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/Screenshot_2022-08-03_at_09.55.03.png"/></a></figure><p id="734fd36a-86e1-4176-bcf0-4557f1c986a2" class="">
+</p><p id="73aa1372-902e-43ad-a04c-dd4f36b4060d" class="">
+</p><p id="9ee44861-7563-43dc-818f-e71d4c1ff2cf" class=""><strong>Designer and Engineer feedback process.</strong></p><p id="e8066e3d-42f0-4e1d-82cf-0dc06445c1af" class="block-color-gray">
+Weekly Cuddle Huddles (Mandatory Friday morning design meetings) were held to discuss what design and engineering working on and give feedback on was working and what was not, and where we could help.</p><p id="08878b05-755a-4048-941f-48ddad79c85f" class="block-color-gray">
+We also gave design and engineering the opportunity to take the stage and talk through
+problems they have experienced, what methods they used to find a solution and how the solution
+might help other designers and engineers.</p><p id="daaa864d-91de-49f8-bcbe-843c3d74883d" class="">
+<mark class="highlight-gray">We wanted designers to participate and contribute in the Design System, as it was for everyone.
+We created a submission process to the Design System team for those who came up with great
+solutions which could help others facing similar problems. If they designed an enhancement to a
+component or template which they have tested, they had the platform to add it.
+</mark></p><p id="8eaf48dd-d52a-4a21-866b-c183acf5e320" class=""><mark class="highlight-gray">We wanted the Design System to be all inclusive, whether you work on the Product Team or
+Design System team.</mark></p><p id="545fd37d-f334-4bbc-9343-e211a57b9c70" class="">
+</p><figure id="99df7920-dd77-4920-b060-30f19bed624a" class="image"><a href="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/submit.jpeg"><img style="width:1590px" src="Nedbank%20Design%20System%20916f0b834edb4cfcbf1d5f70fb5a90f0/submit.jpeg"/></a></figure><h3 id="9e041edd-41a3-468f-8475-4e37a1d5a65d" class="">
+Working with Engineers.
+</h3><p id="05d3d3af-7b9e-4bcd-a003-1048667c2cce" class="block-color-gray">I worked closely with a team of Front-End engineers who coded our Design System
+components and made them available for other wider engineering teams to use.
+
+</p><ul id="93687a72-f4dd-4ae0-a105-529c9d31e016" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Assisting engineers while coding each element and component. The feedback it
+gave to the user and the styling of the component with accessibility in mind.
+Our components where coded in Angular</mark></li></ul><ul id="97cf8c20-14d3-4864-9681-54cf8ba629cb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Assisting them with their interaction with offshore engineering teams - We had various
+teams based in India and Poland and the local group had a rough time keeping up
+with the workload and interacting with the product engineers offshore.</mark></li></ul><ul id="978589a4-b839-4d28-a364-0a56a36acefc" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Assisting also with interactions with designers, when designers and engineers were
+not on the same page. Many times, there would be a misunderstanding and listening
+to both parties and creating a common platform was beneficial.</mark></li></ul><ul id="5e26175d-d873-47d7-b73c-7f0e7b920a4e" class="block-color-gray bulleted-list"><li style="list-style-type:disc">Reviewing of product screens once they have been designed and coded before going
+into production based off the guidelines created in the design documentation.</li></ul><p id="75ae3d5d-f4fb-435c-a1c8-382d23c6db0f" class="">
+</p><h2 id="89020bb3-78ef-48f3-ab9e-1896ac90ea3b" class="block-color-teal">Creating a Design System | Phase 3</h2><p id="c7b5d994-1e65-47b2-8470-2c62f21b053a" class="block-color-gray">
+I joined the product team. This way I could use the Design System as a product designer and
+feedback problems and observations back to the design system team.</p><p id="c5ff14ca-11e2-45d1-87d5-a454b0299274" class="">
+</p><p id="c7690896-2413-4ae0-9ac2-c449506fa1c5" class="">
+</p><p id="3a162fb1-1d41-4a41-9662-3c5867a68de3" class="block-color-teal">___________________________________________________________________________________</p><p id="e3a97714-8c2f-41f6-9e67-ad4fb4c5f4d1" class="">
+</p><p id="dca891b3-b68a-42a4-862f-1976b93aca84" class="block-color-teal"><em>Please be advised due to the sensitive nature of the work and respect for my previous employer I
+am not going into detail on the projects but rather discussing my role and process while in
+the position.</em></p><p id="2ed708f1-ac5d-48f7-82fd-25b8f65bdc6e" class="block-color-teal"><em>Thank you for your time.</em></p><p id="51ed4f6f-7e29-40c7-a7d7-328de803bed4" class="">
+</p><p id="8b434884-9f73-4760-b274-8bf4162daf31" class="">
+</p><p id="2824e5c1-ab9b-4d9b-ae51-8a661d1bb700" class="">
+</p></div></article></body></html>

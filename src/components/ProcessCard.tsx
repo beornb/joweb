@@ -42,45 +42,51 @@ export default function ProcessCard({ title, text, number, text_line_2 }: Proces
         >
           {title}
         </h4>
-        <p className="text-dark hei" dangerouslySetInnerHTML={{ __html: text }}>
-          
-        </p>
-        <motion.p
-          className="text-dark hei"
-          variants={textLine2Variants}
-           dangerouslySetInnerHTML={{ __html: text_line_2 }}
-        >
-        </motion.p>
+
         {number == 1 && (
-          <div className="absolute top-2 right-6">
+          <div className="absolute top-2 right-6  z-1 opacity-50 md:opacity-100">
               <Image src="/elements/element_1.png" alt="" width={300} height={300} />
           </div>    
 
         )}
         {number == 2 && (
-          <div className="absolute top-[-180px] right-6">
+          <div className="absolute top-[-180px]  z-1 right-6  opacity-50 md:opacity-100">
               <Image src="/elements/element_1.png" alt="" width={300} height={300} />
           </div>    
 
         )}
 
                 {number == 3 && (
-          <div className="absolute top-2 right-6">
+          <div className="absolute top-2  z-1 right-6  opacity-50 md:opacity-100">
               <Image src="/elements/element_2.png" alt="" width={300} height={300} />
           </div>    
 
         )}
         {number == 4 && (
-          <div className="absolute top-[-150px] right-6">
+          <div className="absolute top-[-150px] z-1 right-6  opacity-50 md:opacity-100">
               <Image src="/elements/element_2.png" alt="" width={300} height={300} />
           </div>    
 
         )}
+        <div className="relative z-10">
+
+
+        <p className="text-dark max-w-[calc(100vw-200px)]" dangerouslySetInnerHTML={{ __html: text }}>
+          
+        </p>
+        <motion.p
+        className="text-dark max-w-[calc(100vw-200px)]"
+          variants={textLine2Variants}
+           dangerouslySetInnerHTML={{ __html: text_line_2 }}
+        >
+        </motion.p>
+        </div>
+        
             {/* <div className="absolute top-[400px] right-6 opacity-50 z-0">
               <Image src="/elements/element_2.png" alt="" width={300} height={300} />
             </div> */}
       </div>
-      <div  id="number" className="text-7xl pl-5 text-black text-bold absolute  right-6">
+      <div  id="number" className="text-7xl pl-5 text-black text-bold absolute  right-6 z-2">
         {'0' + number.toString()}
       </div>
     </motion.div>

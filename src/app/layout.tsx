@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Viewport } from 'next'
 import { Figtree } from "next/font/google";
 import "./globals.css";
 
@@ -6,6 +7,20 @@ const figtree = Figtree({
   subsets: ["latin"],
   variable: "--font-figtree",
 });
+
+ 
+ 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  
+  // Also supported but less commonly used
+  // interactiveWidget: 'resizes-visual',
+}
+
 
 export const metadata: Metadata = {
   title: "Jo.",
@@ -17,6 +32,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={`${figtree.variable} antialiased`}>

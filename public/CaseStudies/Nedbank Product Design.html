@@ -1,0 +1,714 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Nedbank Product Design</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FWLKRCYWT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9FWLKRCYWT');
+    </script>
+<style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="12b43dd4-5ed1-4f14-9ed2-05a3a446b443" class="page sans"><header><img class="page-cover-image" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/bg-imagery.jpeg" style="object-position:center 93.71000000000001%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/logo-white.svg"/></div><h1 class="page-title">Nedbank Product Design</h1></header><div class="page-body"><p id="e85c9eb2-697c-4e87-98c0-c3f299eaef79" class="">RINBBM - Radically Improved Nedbank Business Banking Maintenance</p><p id="70e877c2-77a8-4a4a-8f16-a64ce9863e8d" class="">
+</p><hr id="96f37ffa-036d-4f89-b06f-97eb1dff4077"/><h3 id="55395ae3-fbd0-4d51-a865-6839b785c3b8" class="">August 2018 – November 2019</h3><p id="73db9d81-a3d8-488d-9329-29b0cf3d5e5a" class="block-color-gray">Ongoing project</p><p id="997cca2c-e91e-46a5-a713-40b1a01d753d" class="">
+</p><h3 id="4ef3f0ce-f563-4448-baa0-65103a9e10a2" class=""><strong>Project Summary</strong></h3><p id="d8d594fb-3a05-4d26-bee3-f2069b2f2728" class="block-color-gray">The goal of this project was to create a platform for Nedbank Business Banking users to be able to view business accounts, set user permissions, make changes to accounts and maintain a business account/s online.
+
+This project was MVP and Nedbank South Africa were in the process of digital transformation and had a launch deadline for January 2020.</p><p id="dcb613cc-9100-416f-b609-eb285fa31671" class="">
+</p><h3 id="5b32bba2-45ba-4ffd-bbc8-d9272e861c7f" class=""><strong>My role</strong></h3><p id="b38ab794-425a-4ebf-9469-9cf07a0e6b22" class="block-color-gray">After spending some time on the design system team, I joined the business banking product
+design team. I joined the RINBBM squad as a senior UX/UI Designer.</p><p id="616505b7-0327-4e38-a5ed-0fafc9eff0b1" class="">
+</p><p id="6c73a29d-2c88-40f0-b8b8-baf0e7a39041" class=""><strong>Process and responsibilities</strong></p><ul id="cd551a15-d94a-4149-9344-97de87a57feb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Taking requirements for design</mark></li></ul><ul id="18d6a16d-bca1-4e7b-ba65-c75846f34333" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Sketching and high-fidelity prototyping</mark></li></ul><ul id="2dc3af61-cb15-469d-9403-4056c413e092" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Coordinating UX copy within product flows</mark></li></ul><ul id="d2a04c14-0ddd-4dd2-b819-dc0957653bcb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">User interface design</mark></li></ul><ul id="39566d43-3174-4230-b8bd-57569a609588" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Prototyping</mark></li></ul><ul id="9bcf392a-1530-4e59-820e-e74cd0996680" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Development hand over</mark></li></ul><ul id="a9ffc3cc-e1dc-4bea-a10d-e54f0f30c575" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Aiding offshore development teams during sprints</mark></li></ul><ul id="ea82968a-e44b-481c-9dce-41f6729eaec9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">QA and testing on product flows</mark></li></ul><p id="ac011744-f99c-4da7-9c88-f5b0820cc43f" class="">
+</p><figure id="0406ff1d-99d8-40a4-85fa-68aa78238b1e" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-19_at_11.50.04.png"><img style="width:1227px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-19_at_11.50.04.png"/></a></figure><h3 id="f80e2628-5faf-4ed4-b731-8477b5695eb6" class=""><strong>My Squad</strong></h3><p id="3245b1f8-68ea-4fc8-9020-ef5cce22fe84" class="block-color-gray">Product owner, Project manager, Business analysts, Tech lead, UX/UI Designers, Off-shore
+development team and Product testers</p><p id="481021fe-5fff-4b5e-9279-28e7be23044d" class="">
+</p><figure id="7971df60-b4d7-46c5-a409-b7b7ce9dcd33" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/team.jpg"><img style="width:3009px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/team.jpg"/></a></figure><p id="a07e7102-a31c-4e50-a1f6-3211f447047f" class="">
+</p><h3 id="22207227-fbcf-4765-9953-aface2008326" class="">Methodology</h3><p id="5f26409f-ea43-438f-87bb-a03e38f9a9cd" class="block-color-gray">We ran SAFE Agile across the Nedbank Business banking program.
+Epics, broken down in 2 week Sprints.</p><p id="92a7fc93-3ca9-4b5e-850e-66bf9c21f1c5" class="">
+</p><h3 id="5e7b71e1-164e-4600-b0dd-276896668fcd" class="">Process within the squad</h3><p id="de7daeb6-dff2-4e65-adef-4cdd16bbc476" class="block-color-gray">Tight budget and timelines really did not allow for much time to explore and test our hypothesis.
+We had to think on our feet and use the business stakeholders and design system to make sure the bank reached their goals.
+
+What was a constant for me was sketching ideas, collaborating in as many
+situations as I could and being as transparent with my design and thinking as possible.</p><p id="6b636c82-6d69-4939-a28a-11b98f7c42cf" class="block-color-gray">
+I found that the more the team saw what I did the easier it was to find errors, and and ideate. 
+I also formed a very good relationship with my assigned business analyst in order to keep communication flowing with business.</p><p id="27b4e5d6-0c33-4284-8726-11df1ddd6151" class="">
+</p><figure id="5e009472-e3d2-4630-a0a3-e42895c8d1ca" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.38.56.png"><img style="width:1404px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.38.56.png"/></a></figure><p id="f8abd3e6-e983-4e7b-b9b9-42f82ea4c9cf" class="">
+</p><p id="c6106644-3cc3-41d2-8442-2637a693c066" class=""> </p><h2 id="b1b568c4-841e-4d15-bc1f-b582245de27f" class="">MVP for release one consisted of;</h2><p id="94179a24-720b-49cd-891a-e3689806f4d7" class="">
+</p><h3 id="f0899088-031c-4e75-ade9-9d919f602d5a" class="block-color-teal"><span style="border-bottom:0.05em solid">Entry Point</span></h3><figure id="7c589cc0-f6b1-4e1e-83f5-4c20fc00706d" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.40.48.png"><img style="width:1286px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.40.48.png"/></a></figure><h3 id="6b1d713c-9dde-4a7b-af71-6e59f7625725" class="block-color-teal"><span style="border-bottom:0.05em solid">Managing accounts</span></h3><figure id="df525c35-31ad-4579-a261-a761a7c9bcc9" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.41.00.png"><img style="width:1292px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.41.00.png"/></a></figure><h3 id="1c02c7fe-86e7-41aa-a22a-12e05304371e" class="block-color-teal"><span style="border-bottom:0.05em solid">Linking accounts</span></h3><figure id="8f02040c-4cd0-4fe2-add6-d9fe6b70a13e" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.41.10.png"><img style="width:1286px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.41.10.png"/></a></figure><h3 id="452d3f00-bb31-43bf-99e5-53eafffd31ba" class="block-color-teal"><span style="border-bottom:0.05em solid">User Permissions </span></h3><figure id="699775a1-52a8-475d-a7c0-fa3500d592f7" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.41.10%201.png"><img style="width:1286px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_13.41.10%201.png"/></a></figure><h3 id="19e8d3f6-45aa-4b9d-90ac-76ef7e3b54fd" class="block-color-teal"><span style="border-bottom:0.05em solid">Creating a Business account</span></h3><figure id="26256b9c-2527-4a54-b35f-4056be8e76a9" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.08.06.png"><img style="width:1296px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.08.06.png"/></a></figure><figure id="769b2da1-c59f-4a0b-b678-42f90cb8e5aa" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.08.18.png"><img style="width:1287px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.08.18.png"/></a></figure><p id="4ed827da-9b5e-44c9-b596-ac333cdf6e7f" class="">
+</p><h2 id="4ef7b9bf-4532-455f-b9d6-4ea47c6b390a" class="">Development</h2><p id="55ec07ba-e296-4ee9-b783-7e0a5325da17" class="block-color-teal"><mark class="highlight-gray">The bank employed an off-shore development team in India. We dealt with language and time zone differences which made things difficult.
+</mark></p><p id="366ab5c4-1179-4b55-9185-8640545ac375" class="block-color-gray">Our On-site<mark class="highlight-gray"> design system engineer and myself worked very closely to try and uphold the bank’s quality of work by educating the teams on the design system and the principles of Nedbank Design.</mark></p><p id="1150114d-0d0d-4a4b-a266-9da5816e5318" class="">
+</p><p id="fc08c513-fe60-4026-a5a2-2569a2842dc6" class="">
+</p><figure id="5c199094-7c6a-4e53-a3c9-b044b6894542" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.13.25.png"><img style="width:1364px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.13.25.png"/></a></figure><figure id="7ef87c80-ca14-4aaf-90ee-750bd84a6ebd" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.13.38.png"><img style="width:1331px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.13.38.png"/></a></figure><h2 id="fec87947-db37-4390-8d5a-6f128348954c" class="">QA</h2><p id="34b192a3-36f4-4957-9a7e-1cd34f7b2f34" class=""><mark class="highlight-gray">We also had to educate the QA testers on design foundations. I ran a “Design Basics” workshop with our testing team and created a UI checklist for them to ensure that they could test functionality and also spot obvious interface design flaws.</mark></p><p id="3447e388-ee79-461c-a4d5-ac32b3438bcf" class="">
+</p><figure id="e6a3dd62-1f6e-4a99-9dee-d0863cc81f11" class="image"><a href="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.13.54.png"><img style="width:1320px" src="Nedbank%20Product%20Design%200406ff1d99d840a485fa68aa78238b1e/Screenshot_2022-08-23_at_14.13.54.png"/></a></figure><p id="d10744ca-1203-4a4c-9f27-35564042a7ae" class="">
+</p><p id="93561390-1f7e-4ed2-bef3-4e19a91ce5d9" class="block-color-teal">___________________________________________________________________________________</p><p id="f5ee4bb8-a32f-4b32-93fb-982e527630c5" class="">
+</p><p id="8da63326-dd43-4c06-b3c1-789c31c7d76b" class="block-color-teal"><em>Please be advised due to the sensitive nature of the work and respect for my previous employer I
+am not going into detail on the projects but rather discussing my role and process while in
+the position.</em></p><p id="35490ed4-4c3a-4667-a462-340332940d08" class="block-color-teal"><em>Thank you for your time.</em></p><p id="15a49e02-dd95-43db-8b33-232d5fe71de6" class="">
+</p><p id="ffacf541-a1c6-49ed-b9fa-bbc38eb7972e" class="">
+</p><p id="7fa46c3f-6170-47df-a5cc-c022948c7d00" class="">
+</p><p id="a1422844-3bda-4c4b-af12-9e4e7b2e1283" class="">
+</p></div></article></body></html>
