@@ -4,22 +4,29 @@ import ProjectHeader from "@/components/ProjectHeader";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Carousel from "@/components/Carousel";
+          
 
-const images = [
+const imagesCarousel = [
   "/images/project/screenshot-vt-1.png",
   "/images/project/screenshot-vt-2.png",
   "/images/project/screenshot-vt-3.png",
+  "/images/project/screenshot-vt-4.png",
+  "/images/project/screenshot-vt-5.png",
+  "/images/project/screenshot-vt-6.png",
 ];
 
 export default function VirtualTourPage() {
   return (
     <div className="relative">
+          
       <Link href="/" className="absolute top-8 left-8 z-10">
         <Image src="/images/icons/home.svg" alt="Back" width={40} height={40} />
       </Link>
       <ProjectHeader
-        projectHeading="Creating the Virtual Tour: <br /> A Dual Lens in Product & Marketing"
+        projectSubHeading="From Product to Promotion:"
+
+        projectHeading="A Dual-Lens Virtual Tour"
         projectTags={[
           "Business Valuation",
           "Fintech",
@@ -31,13 +38,18 @@ export default function VirtualTourPage() {
           "Product Help Content",
         ]}
       />
-      <main className="container mx-auto py-12 px-4 min-h-screen flex flex-col items-center justify-center text-center text-lg">
+      <main className="container mx-auto py-12 pb-4 pt-4 min-h-screen flex flex-col items-center justify-center text-center text-lg">
+         <div
+          id="main"
+          className="container mx-auto max-w-[700px] mt-0 text-left text-black"
+        >
         <Image
-          width={1118}
-          height={699}
+          width={700}
+          height={438}
           alt="Virtual Tour Screenshot"
           src="/images/project/screenshot-virtual-tour.png"
         />
+        </div>
         <div id="details" className="flex mt-16 gap-8">
           <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
             <p className="text-mid font-medium mb-2">ROLE</p>
@@ -146,36 +158,36 @@ export default function VirtualTourPage() {
 
           <h2 className="text-mid text-3xl font-medium mt-12">Process</h2>
 
-          <h3 className="text-mid text-2xl font-medium mt-14">
+          <h3 className="text-mid text-2xl font-medium mt-4">
             Product Marketing Lens
           </h3>
-          <p className="mt-4">
+          <p className="mt-4 font-semibold">
             To support first-time users, especially those new to valuation we
             built a clear, empathetic onboarding story that simplifies
             complexity.
           </p>
-          <h4 className="mt-4">✍️ Narrative Strategy</h4>
+          <h4 className="mt-8 font-semibold">Narrative Strategy</h4>
           <p>Rather than overwhelming with features, we focused on:</p>
           <ul className="list-disc list-inside">
             <li>Removing jargon</li>
             <li>Framing the tour as a guided, rewarding journey</li>
             <li>Building trust through paced, user-friendly messaging</li>
           </ul>
-          <h4 className="mt-4">🤝 Collaboration</h4>
+          <h4 className="mt-4 font-semibold">Collaboration</h4>
           <p>Partnered with Valuation Services and Customer Success to:</p>
           <ul className="list-disc list-inside">
             <li>Pinpoint misunderstood features</li>
             <li>Highlight key &quot;aha&quot; moments</li>
             <li>Use real user language to shape tone and flow</li>
           </ul>
-          <h4 className="mt-4">🧩 Story Flow</h4>
+          <h4 className="mt-4 font-semibold">Story Flow</h4>
           <p>Using dummy data, we guided users through:</p>
           <ul className="list-disc list-inside">
             <li>Company setup</li>
             <li>Method selection and inputs</li>
             <li>Final valuation report — the “reward”</li>
           </ul>
-          <h4 className="mt-4">🛠 Tool Choice</h4>
+          <h4 className="mt-4 font-semibold">Tool Choice</h4>
           <p>We chose Navattic for its:</p>
           <ul className="te list-disc list-inside">
             <li>Easy embedding</li>
@@ -183,65 +195,31 @@ export default function VirtualTourPage() {
             <li>Flexibility for future updates</li>
           </ul>
 
-          <div
-            id="carousel-container"
-            className="relative w-[120%] left-[-10%] h-[250px] my-8 overflow-hidden rounded-lg shadow-lg"
-          >
-            <motion.div
-              className="flex h-full" // Ensure the track uses full height of the aspect ratio container
-              initial={{ x: "0%" }}
-              animate={{ x: `-${images.length * 100}%` }}
-              transition={{
-                ease: "linear",
-                duration: images.length * 14, // Adjust duration for scroll speed (e.g., 7 seconds per image)
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-            >
-              {[...images, ...images].map((src, index) => (
-                <div
-                  key={`marquee-image-${index}`}
-                  className="relative w-full h-full flex-shrink-0"
-                  style={{ flexBasis: "100%" }} // Each image container takes full width of the carousel-container
-                >
-                  <Image
-                    src={src}
-                    alt={`Virtual Tour Screenshot ${
-                      (index % images.length) + 1
-                    }`}
-                    layout="fill"
-                    objectFit="contain" // Ensures the whole image is visible within its 16/9 container
-                    className="rounded-lg"
-                  />
-                </div>
-              ))}
-            </motion.div>
-          </div>
+          <Carousel imageWidths={522} images={imagesCarousel} duration={imagesCarousel.length * 7} className="mt-14 h-[250px] w-[120%] left-[-10%]" />
 
           <h3 className="text-mid text-2xl font-medium mt-14">
             Product Designer Lens
           </h3>
-          <p className="mt-4">
+          <p className="mt-4 font-semibold">
             As the designer, I collaborated with our Front-End Engineer to build
             the tour in Navattic, using curated screenshots to simulate a real
             product experience.
           </p>
-          <h4 className="mt-4">🔍 Simplifying the Interface</h4>
+          <h4 className="mt-8 font-semibold">Simplifying the Interface</h4>
           <p>We used Navattic’s flexibility to:</p>
           <ul className="list-disc list-inside">
             <li>Hide advanced features that could distract new users</li>
             <li>Highlight only essential steps for completing a valuation</li>
             <li>Create a focused, intuitive flow</li>
           </ul>
-          <h4 className="mt-4">🎨 On-Brand Experience</h4>
+          <h4 className="mt-4 font-semibold">On-Brand Experience</h4>
           <p>To keep the experience consistent:</p>
           <ul className="list-disc list-inside">
             <li>Applied our brand’s colors, fonts, and UI components</li>
             <li>Styled tooltips and modals to match our design system</li>
             <li>Made the tour feel like a native part of Valutico</li>
           </ul>
-          <h4 className="mt-4">🔗 Supporting Growth & Education</h4>
-          <p>We:</p>
+          <h4 className="mt-4 font-semibold">Supporting Growth & Education</h4>
           <ul className="list-disc list-inside">
             <li>Embedded videos and Help Center links</li>
             <li>Verified all flows for smooth navigation</li>
@@ -257,20 +235,20 @@ export default function VirtualTourPage() {
               alt="Virtual Tour design process in Figma"
               width={1118}
               height={629} // Calculated to maintain 16:9 aspect ratio for a 1118px width
-              className="rounded-lg shadow-md"
+              className="rounded-sm"
             />
           </div>
 
           <h3 className="text-mid text-2xl font-medium mt-14">
             Collaboration & Tools
           </h3>
-          <p className="mt-4">Who you worked with:</p>
+          <p className="mt-4 font-semibold">Team:</p>
           <ul className="list-disc list-inside">
             <li>Product for accuracy</li>
             <li>Marketing, Sales/CS for real objections</li>
             <li>Front End Engineer</li>
           </ul>
-          <p className="mt-4">Tools used:</p>
+          <p className="mt-4 font-semibold">Tools:</p>
           <ul className="list-disc list-inside">
             <li>Figma, Posthog, Navattic, Calendy</li>
           </ul>
@@ -281,17 +259,15 @@ export default function VirtualTourPage() {
               alt="Virtual Tour Analytics Dashboard"
               width={700}
               height={365}
-              className="rounded-lg shadow-md"
+              className="rounded-sm"
             />
           </div>
 
           <h3 className="text-mid text-2xl font-medium mt-14">
             Outcome & Impact
           </h3>
-          <p className="mt-4">
-            <em>Use metrics if you have them:</em>
-          </p>
-          <ul className="list-disc list-inside">
+
+          <ul className="list-disc list-inside mt-4">
             <li>
               Tour completion rate: 60% above previously implemented Virtual
               Tour
@@ -302,28 +278,28 @@ export default function VirtualTourPage() {
           </ul>
 
           <h3 className="text-mid text-2xl font-medium mt-14">Reflection</h3>
-          <p className="mt-4">What I learned</p>
+          <p className="mt-4 font-semibold">What I learned</p>
           <ul className="list-disc list-outside ml-4">
-            <li>
+            <li className="mt-4">
               The power of narrative in complex products. Crafting a guided
               experience using storytelling helped simplify a highly technical
               product. I learned how effective it is to remove friction and use
               a structured journey to help users focus on value over features.
             </li>
-            <li>
+            <li className="mt-4">
               Balancing brand consistency across embedded tools. Integrating
               Navattic into our experience taught me the importance of
               maintaining visual and experiential consistency across platforms.
               Even small misalignments can erode trust.
             </li>
-            <li>
+            <li className="mt-4">
               Cross-functional collaboration fuels better outcomes. Working with
               our Front-End Engineer, Valuation Services, and Customer Success
               showed me how vital it is to incorporate multiple perspectives.
               This helped us spotlight misunderstood features and tune the tour
               to real-world customer pain points.
             </li>
-            <li>
+            <li className="mt-4">
               A good demo is a growth lever. This project highlighted that even
               in sales-led orgs, a well-crafted self-serve demo can act as a
               scalable bridge to engage and qualify users in new markets.

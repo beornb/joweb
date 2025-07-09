@@ -43,12 +43,18 @@ export default function DoneDiligencePage() {
       projectTags={["Business Valuation", "Fintech", "B2B | B2C", "Teaser", "GTM", "Product Marketing"]}
       />
        <main className="container mx-auto py-12 px-4 min-h-screen flex flex-col items-center justify-center text-center text-lg">
+         <div
+          id="main"
+          className="container mx-auto max-w-[700px] mt-0 text-left text-black"
+        >
         <Image
           width={950}
           height={499}
           alt="Done Dilligence Screenshot"
           src="/images/project/screenshot-done-dilligence.png"
         />
+        </div>
+
         <div id="details" className="flex mt-16 gap-12 max-w-[900px] w-[900px] ">
           <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
             <p className="text-mid font-medium mb-2">ROLE</p>
@@ -128,7 +134,7 @@ export default function DoneDiligencePage() {
 
           <Carousel imageWidths={250} images={instagramImages} duration={instagramImages.length * 7} className="mt-14 h-[250px] w-[120%] left-[-10%]" />
 
-            <h2 className="text-mid text-3xl font-medium mt-6">The Campaign</h2>
+            <h2 className="text-mid text-3xl font-medium mt-14">The Campaign</h2>
             <h3 className="text-mid text-xl font-medium mt-6">You’ve done your diligence—now we’ve done it for you.</h3>
           <p className=" mt-4">
         To support this message, I developed a multi-channel teaser campaign, including:</p>
@@ -149,7 +155,7 @@ export default function DoneDiligencePage() {
           <Carousel
             images={images}
             duration={images.length * 8}
-            className="w-[120%] left-[-10%] h-[250px] my-8"
+            className="w-[120%] left-[-10%] h-[250px] my-8 mt-14"
             motionDivClassName="h-full"
             imageWidths={imageWidths}
           />

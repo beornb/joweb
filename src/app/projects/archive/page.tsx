@@ -71,7 +71,7 @@ export default function ArchivePage() {
             <ArchiveProjectCard link="Adverity Billing Wizard" image="04 Adverity Billing Wizard" text="Adverity wants the ability to offer self service customers a way to seamlessly upgrade their plan to meet their data needs or provide the ability purchase more data on a buy as you use basis." />
             <ArchiveProjectCard link="Adverity Portal" image="08 Adverity Portal" text="Enriching your data means transforming and tailoring the data according to your needs. An enrichment is a set of instructions that you specify for the product to transform your data." />
 
-            <ArchiveProjectCard link="Nedbank Design System" image="05 Nedbank Design System" text="Radically Improved Nedbank Business Banking Maintenance. Digital transformation program." />
+            <ArchiveProjectCard link="Nedbank Design System" image="05 Nedbank Design System" text="Radically Improved Nedbank Business Banking Maintenance through Seamless Digital Transformation Program." />
 
             <ArchiveProjectCard link="dischem" image="12 dischem" text="With Dis-Chem’s growing digital presence, we focused on building an app experience that placed user needs at the center — from effortless document submission to fast, reliable medication delivery, all wrapped in an interface that felt both modern and familiar." />
 

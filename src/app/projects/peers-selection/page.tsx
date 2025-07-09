@@ -2,6 +2,15 @@ import ProjectHeader from "@/components/ProjectHeader";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import Carousel from "@/components/Carousel";
+
+const imagesCarousel = [
+  "/images/project/carousel-ideation-1.png",
+  "/images/project/carousel-ideation-2.png",
+  "/images/project/carousel-ideation-3.png",
+  "/images/project/carousel-ideation-4.png",
+  "/images/project/carousel-ideation-5.png"
+];
 
 export default function PeersSelectionPage() {
   return (
@@ -10,7 +19,9 @@ export default function PeersSelectionPage() {
         <Image src="/images/icons/home.svg" alt="Back" width={40} height={40} />
       </Link>
       <ProjectHeader
-        projectHeading="Reworked for clarity. <br /> Designed for precision.<br /> Select your best-fit peers with ease."
+        projectSubHeading="Reworked for clarity."
+ 
+        projectHeading="Designed for precision.<br /> Select your best-fit peers with ease."
         projectTags={[
           "Business Valuation",
           "B2C",
@@ -106,7 +117,7 @@ export default function PeersSelectionPage() {
             based on:
           </p>
 
-          <ul className="list-disc list-outside pl-5">
+          <ul className="list-disc list-outside pl-5 mt-4">
             <li>Keyword matches from company and industry data</li>
             <li>Similar peers to those already selected</li>
             <li>Early-stage algorithmic recommendations</li>
@@ -121,7 +132,7 @@ export default function PeersSelectionPage() {
 
           <h3 className="text-mid text-2xl font-medium mt-14">Deliverables</h3>
 
-          <ul className="list-disc list-inside mt-4">
+          <ul className="list-disc list-outside pl-5 mt-4">
             <li>
               A redesigned peer selection screen, combining search, suggestions,
               and list-building in a single, user-friendly interface
@@ -136,27 +147,27 @@ export default function PeersSelectionPage() {
           </ul>
 
           <div className="flex gap-6 justify-around mt-8">
-            <div className="w-[140] text-center bg-[var(--rose-gold-bg-semi)] px-6 py-4 rounded-lg">
+            <div className="w-[180] text-left bg-[var(--light-beige)] px-6 py-4 rounded-lg">
               <p className="text-[var(--rose-gold-bg-mid)] text-4xl font-semibold">
                 -30
               </p>
-              <p className="mt-2">Reduced from hours to mins</p>
+              <p className="mt-2 font-semibold">Reduced from hours to mins</p>
             </div>
-            <div className="w-[140] text-center bg-[var(--rose-gold-bg-semi)] px-6 py-4 rounded-lg">
+            <div className="w-[180] text-left bg-[var(--light-beige)] px-6 py-4 rounded-lg">
               <p className="text-[var(--rose-gold-bg-mid)] text-4xl font-semibold">
                 60%
               </p>
-              <p className="mt-2">Increased Trust</p>
+              <p className="mt-2 font-semibold">Increased Trust</p>
             </div>
-            <div className="w-[140] text-center bg-[var(--rose-gold-bg-semi)] px-6 py-5 rounded-lg">
+            <div className="w-[180] text-left bg-[var(--light-beige)] px-6 py-5 rounded-lg">
               <p className="text-[var(--rose-gold-bg-mid)] text-4xl font-semibold">
                 +8
               </p>
-              <p className="mt-2">Increased User Happiness </p>
+              <p className="mt-2 font-semibold">Increased User Happiness </p>
             </div>
           </div>
           <Image
-            className="mt-4"
+            className="mt-8"
             width={1018}
             height={599}
             alt="Peers Selection Screenshot"
@@ -173,7 +184,7 @@ export default function PeersSelectionPage() {
             internally.
           </p>
 
-          <ul className="list-disc list-outside pl-5">
+          <ul className="list-disc list-outside pl-5 mt-4">
             <li>
               Feedback from our Customer Success and Valuation Services teams,
               who work directly with users
@@ -230,13 +241,24 @@ export default function PeersSelectionPage() {
             </div>
           </div>
 
-          <Image
-            className="mt-4"
-            width={1018}
-            height={599}
-            alt="Peers Selection Screenshot"
-            src="/images/project/screenshot-peers-selection-3.png"
-          />
+          <div className="mt-8 flex flex-col gap-4 md:flex-row">
+            <Image
+              id="metrics1"
+              className="w-full md:w-1/2"
+              width={1018}
+              height={599}
+              alt="Peers Selection Screenshot"
+              src="/images/project/screenshot-peers-selection-3.1.png"
+            />
+            <Image
+              id="metrics2"
+              className="w-full md:w-1/2"
+              width={1018}
+              height={599}
+              alt="Peers Selection Screenshot"
+              src="/images/project/screenshot-peers-selection-3.png"
+            />
+          </div>
 
           <h3 className="text-mid text-2xl font-medium mt-14">Ideation</h3>
 
@@ -250,13 +272,8 @@ export default function PeersSelectionPage() {
             shared knowledge of user needs and technical capabilities.
           </p>
 
-          <Image
-            className="mt-4"
-            width={1018}
-            height={599}
-            alt="Peers Selection Screenshot"
-            src="/images/project/screenshot-peers-selection-4.png"
-          />
+          <Carousel imageWidths={441} images={imagesCarousel} duration={imagesCarousel.length * 7} className="mt-14 h-[250px] w-[120%] left-[-10%]" />
+          
 
           <h3 className="text-mid text-2xl font-medium mt-14">Design</h3>
 
@@ -307,7 +324,7 @@ export default function PeersSelectionPage() {
           </p>
 
           <Image
-            className="mt-4"
+            className="mt-8"
             width={1018}
             height={599}
             alt="Peers Selection Screenshot"
@@ -330,7 +347,7 @@ export default function PeersSelectionPage() {
           <Image
             width={1018}
             height={599}
-            className="mt-4"
+            className="mt-8"
             alt="Peers Selection Screenshot"
             src="/images/project/screenshot-peers-selection-6.png"
           />
@@ -347,11 +364,11 @@ export default function PeersSelectionPage() {
           </p>
 
           <Image
-            className="mt-4"
+            className="mt-8"
             width={1018}
             height={599}
             alt="Peers Selection Screenshot"
-            src="/images/project/screenshot-peers-selection-7.png"
+            src="/images/project/screenshot-peers-selection-1.png"
           />
 
           <h3 className="text-mid text-2xl font-medium mt-14">Next Steps</h3>
@@ -361,7 +378,7 @@ export default function PeersSelectionPage() {
             feature, our next steps include:
           </p>
 
-          <ul className="list-disc list-outside pl-5">
+          <ul className="list-disc list-outside pl-5 mt-4">
             <li>
               Monitor usage: Track metrics such as engagement with suggested
               peers and time-to-selection to understand adoption and friction
