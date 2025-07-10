@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Carousel from "@/components/Carousel";
 import Link from "next/link";
+import ProjectDetails from "@/components/ProjectDetails";
 
 const images = [
   "/images/project/screenshot-dd-1.png",
@@ -31,6 +32,13 @@ const instagramImages = [
   "/images/project/done-dillegence-cards-5.png",
 ];
 
+const projectDetails = {
+  role: ['PMM', 'Product Designer'],
+  team: ["Marketing Manager", "PMM", "Product Designer"],
+  tools: ["Figma, Canva"],
+  timeline: ["April – May 2025"],
+};
+
 export default function DoneDiligencePage() {
   return (
    <div className="relative">
@@ -55,27 +63,12 @@ export default function DoneDiligencePage() {
         />
         </div>
 
-        <div id="details" className="flex mt-16 gap-12 max-w-[900px] w-[900px] ">
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">ROLE</p>
-            <p>PMM</p>
-            <p>Product Designer</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TEAM</p>
-            <p>Marketing Manager</p>
-            <p>PMM</p>
-            <p>Product Designer</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TOOLS</p>
-            <p>Figma, Canva</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TIMELINE</p>
-            <p>April – May 2025</p>
-          </div>
-        </div>
+        <ProjectDetails
+          role={projectDetails.role}
+          team={projectDetails.team}
+          tools={projectDetails.tools}
+          timeline={projectDetails.timeline}
+        />
 
         <div
           id="main"

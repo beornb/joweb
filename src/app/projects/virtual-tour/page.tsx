@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Carousel from "@/components/Carousel";
+import ProjectDetails from "@/components/ProjectDetails";
           
 
 const imagesCarousel = [
@@ -15,6 +16,13 @@ const imagesCarousel = [
   "/images/project/screenshot-vt-5.png",
   "/images/project/screenshot-vt-6.png",
 ];
+
+const projectDetails = {
+  role: ["Product Designer", "Product Marketing Manager", "(Strategy → Design → Execution)"],
+  team: ["VP Marketing", "Product Designer", "Product Marketing Manager", "Front-end Engineer"],
+  tools: ["Figma, Navattic", "Salesforce, Calendy"],
+  timeline: ["January – March 2025"],
+};
 
 export default function VirtualTourPage() {
   return (
@@ -50,30 +58,14 @@ export default function VirtualTourPage() {
           src="/images/project/screenshot-virtual-tour.png"
         />
         </div>
-        <div id="details" className="flex mt-16 gap-8">
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">ROLE</p>
-            <p>Product Designer</p>
-            <p>Product Marketing Manager</p>
-            <p>(Strategy → Design → Execution)</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TEAM</p>
-            <p>VP Marketing</p>
-            <p>Product Designer /</p>
-            <p>Product Marketing Manager</p>
-            <p>Front-end Engineer</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TOOLS</p>
-            <p>Figma, Navattic</p>
-            <p>Salesforce, Calendy</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TIMELINE</p>
-            <p>January – March 2025</p>
-          </div>
-        </div>
+        
+        <ProjectDetails
+          role={projectDetails.role}
+          team={projectDetails.team}
+          tools={projectDetails.tools}
+          timeline={projectDetails.timeline}
+        />
+        
 
         <div
           id="main"

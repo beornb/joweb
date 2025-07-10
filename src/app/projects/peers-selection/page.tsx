@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Carousel from "@/components/Carousel";
+import ProjectDetails from "@/components/ProjectDetails";
 
 const imagesCarousel = [
   "/images/project/carousel-ideation-1.png",
@@ -11,6 +12,19 @@ const imagesCarousel = [
   "/images/project/carousel-ideation-4.png",
   "/images/project/carousel-ideation-5.png"
 ];
+
+const projectDetails = {
+  role: ["Product Designer", "Researcher", "Product Marketing Manager"],
+  team: [
+    "Product Owner",
+    "Product Designer",
+    "Valuation Services Specialist",
+    "Customer Success Specialist",
+    "Sales Specialists",
+  ],
+  tools: ["Figma, Post Hog", "Metabase, Intercom", "Google Suite"],
+  timeline: ["Commercial Release Cycles ", "= 12 weeks"],
+};
 
 export default function PeersSelectionPage() {
   return (
@@ -33,33 +47,12 @@ export default function PeersSelectionPage() {
         ]}
       />
       <main className="container mx-auto py-12 px-4 min-h-screen flex flex-col items-center justify-center text-center">
-        <div id="details" className="flex gap-8">
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">ROLE</p>
-            <p>Product Designer</p>
-            <p>Researcher</p>
-            <p>Product Marketing Manager</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TEAM</p>
-            <p>Product Owner</p>
-            <p>Product Designer</p>
-            <p>Valuation Services Specialist</p>
-            <p>Customer Success Specialist</p>
-            <p>Sales Specialists</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TOOLS</p>
-            <p>Figma, Post Hog</p>
-            <p>Metabase, Intercom</p>
-            <p>Google Suite</p>
-          </div>
-          <div className="w-1/4 text-lg text-black text-left rounded-md p-3 bg-[var(--rose-gold-bg-light))]">
-            <p className="text-mid font-medium mb-2">TIMELINE</p>
-            <p>Commercial Release Cycles </p>
-            <p>= 12 weeks</p>
-          </div>
-        </div>
+        <ProjectDetails
+          role={projectDetails.role}
+          team={projectDetails.team}
+          tools={projectDetails.tools}
+          timeline={projectDetails.timeline}
+        />
 
         <div
           id="main"
@@ -146,20 +139,20 @@ export default function PeersSelectionPage() {
             </li>
           </ul>
 
-          <div className="flex gap-6 justify-around mt-8">
-            <div className="w-[180] text-left bg-[var(--light-beige)] px-6 py-4 rounded-lg">
+          <div id="metricCards" className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+            <div className="text-left bg-[var(--light-beige)] px-6 py-4 rounded-lg">
               <p className="text-[var(--rose-gold-bg-mid)] text-4xl font-semibold">
                 -30
               </p>
               <p className="mt-2 font-semibold">Reduced from hours to mins</p>
             </div>
-            <div className="w-[180] text-left bg-[var(--light-beige)] px-6 py-4 rounded-lg">
+            <div className="text-left bg-[var(--light-beige)] px-6 py-4 rounded-lg">
               <p className="text-[var(--rose-gold-bg-mid)] text-4xl font-semibold">
                 60%
               </p>
               <p className="mt-2 font-semibold">Increased Trust</p>
             </div>
-            <div className="w-[180] text-left bg-[var(--light-beige)] px-6 py-5 rounded-lg">
+            <div className="text-left bg-[var(--light-beige)] px-6 py-5 rounded-lg">
               <p className="text-[var(--rose-gold-bg-mid)] text-4xl font-semibold">
                 +8
               </p>
