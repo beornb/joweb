@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Rose Gold Palette */
+  --bg-light: #fffffe; /* Off-White */
+  --rose-gold-bg-light: #fbf9f5; ; /* Pale Pink */
+  --rose-gold-pale-pink: #FBEAEB; /* Pale Pink */
+  --rose-gold-pink: #e6d4d5; /* Pale Pink */
+  --rose-gold-fg-light: #7C525A; /* Dark Desaturated Rose */
+  --rose-gold-fg-mid: #A6471B; /* Rusty Pink */
+  --rose-gold-bg-dark: #4A3B3C;  /* Dark Warm Rosy Brown */
+  --rose-gold-fg-dark: #E0B8BF;  /* Light Soft Rose */
+  --rose-gold-bg-mid: #A6471B;  /* Rusty Pink */
+  --golden: #D4AF37; /* Yellow Gold */
+  --light-border: #E8C9AD;
+  --light-beige: rgb(241, 229, 214);
+  --dark-beige: rgb(251, 234, 217);
+  --mono-light: #EDEFF1;
+  --rose-gold-bg-semi:#e2d5ca;
+  
+
+
+  /* Apply Rose Gold as default theme */
+  --background: var(--bg-light);
+  --foreground: var(--rose-gold-fg-light);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-figtree);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.border-light {
+ border: 4px solid rgba(232, 201, 173, .5)
 }
+
+.border-light-project {
+ border: 3px solid rgba(232, 201, 173, .5)
+}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
+
+.text-dark {
+  color:  var(--rose-gold-bg-dark);
+}
+.text-mid {
+  color:  var(--rose-gold-bg-mid);
+}
+.carosel {
+  max-width: calc(100vw - 110px)
+}
+@media screen and (min-width: 768px) {
+  .carosel {
+    max-width: calc(100vw - 300px)
+  }
+}
+
+.text-black {
+  color:  var(--color-black);
+}
+.text-gold {
+  color:  var(--golden);
+}
+
+.header-height {
+  min-height: calc(100vh - 250px) 
+}
+.header-height-project {
+  min-height: calc(100vh - 250px)
+}
+.text-light {
+  color:  var(--rose-gold-bg-light);
+}
+.text-white {
+  color: var(--color-white);
+}
+
+.bg-dark {
+  background-color: var(--rose-gold-bg-dark)
+}
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+  z-index: -1;
+}
+

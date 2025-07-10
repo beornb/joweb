@@ -1,0 +1,17 @@
+ Volume in drive D is Data
+ Volume Serial Number is 7858-EF55
+
+ Directory of D:\Projects\personal\joweb\public\companies
+
+22/05/2025  20:23    <DIR>          .
+22/05/2025  20:16    <DIR>          ..
+22/05/2025  20:16             9,404 Adverity.svg
+22/05/2025  20:16            63,331 African Bank.svg
+22/05/2025  20:16             5,226 Dischem.svg
+22/05/2025  20:23                 0 names.txt
+22/05/2025  20:16             1,894 Nedbank.svg
+22/05/2025  20:16            59,384 SAA.svg
+22/05/2025  20:16             9,454 Talent Garden.svg
+22/05/2025  20:16             4,274 Valutico.svg
+               8 File(s)        152,967 bytes
+               2 Dir(s)  365,396,860,928 bytes free

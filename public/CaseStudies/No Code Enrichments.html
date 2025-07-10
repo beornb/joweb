@@ -1,0 +1,727 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>No Code Enrichments </title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FWLKRCYWT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9FWLKRCYWT');
+    </script>
+<style>
+
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6ede1d0c-546c-4c52-9f85-77f4d15df364" class="page sans"><header><img class="page-cover-image" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/zoom-background-flow.png" style="object-position:center 99.33999999999999%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/logo.svg"/></div><h1 class="page-title"><strong>No Code Enrichments </strong></h1></header><div class="page-body"><p id="f8d23f01-2b7e-490a-969f-346fa3e1ffb7" class="block-color-gray">Enriching your data means transforming and tailoring the data according to your needs.
+An enrichment is a set of instructions that you specify for the product to transform your data.</p><p id="4df6b8c3-f16c-48ad-a391-35d9727c25e0" class="">
+</p><hr id="7e177aa7-7727-4089-8d8a-03321792ce3c"/><p id="e17e180d-af6c-4d22-9307-d0add0a77976" class="">
+</p><h3 id="4ae3faa2-98c4-45ed-8dfb-8024e5a80a74" class=""><strong>Adverity 2021 / Quarterly Shaping &amp; Building</strong></h3><p id="cb1c4209-8455-4596-a97c-13a152f8da06" class="block-color-gray">Building the Enrichments library is an ongoing project. A version is shaped and built on a quarterly basis</p><p id="168214eb-d675-4d72-9c8a-7121851c6058" class="">
+</p><figure id="7622be96-6ec3-408d-87bd-051187192d91" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-07-27_at_14.48.30.png"><img style="width:1034px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-07-27_at_14.48.30.png"/></a></figure><p id="74ea7193-c8fb-4b8a-8ac6-5ab334ec6db8" class="">
+</p><h3 id="5c80c897-e354-4581-be28-51a1aa0be261" class=""><strong>My role</strong></h3><p id="7d7f934b-1680-49ed-8449-966ecca819f0" class="block-color-gray">I was assigned as the Enrichment Pod’s full time UX/UI resource.
+The Pod was made up of a Product Manager, Back-end &amp; Front-end engineers and a UX/UI designer.</p><p id="f05d3952-ebca-4906-a65d-eb44676403ba" class="">
+</p><h3 id="8ef74e61-ef10-42cc-b311-37a9f761b894" class=""><strong>Project Summary</strong></h3><p id="5d9e455d-dd2e-4cab-8d9d-a08fe064f006" class="block-color-gray">The general idea of “enrichments” is to either remove relatively complex data transformations or to enrich customer data with generic data and enabling marketing business users to effortlessly leverage our powerful transformation engine. </p><p id="e15986f1-54d0-4f03-b98f-fca021620a6f" class="">
+</p><h3 id="49a39b37-23f4-41c3-8c9e-79d8758051a8" class=""><strong>The Problem</strong></h3><p id="7e3b5848-b098-424d-936e-38bc68bbecdb" class="block-color-gray">Our clients buy our solution in order to understand their marketing data or their customers&#x27; journey. To make it happen, they need to be able to see outliers, trends, and the cause and effect across data sets. This means they need to bring all the data together in one platform, and link up fields where they are similar.</p><p id="77b74e8a-5f20-43c5-a5d5-7377e9fe6a38" class=""><mark class="highlight-gray">Even though clients make connections and bring their data together through straightforward APIs, without unifying the data it will still be sitting in disparate buckets. </mark></p><p id="bce29da4-0a45-4274-b464-37ac9bed2e8b" class=""><mark class="highlight-gray">This is where Enrichments come into the place as a set of intelligent recipes which help marketeers with harmonising the data, preparing it for the further use in or outside of the platform.</mark></p><p id="3b516c58-fe01-4de6-a568-be63bdf2a888" class="">
+</p><h3 id="fa6727ac-6ce0-48ff-9a52-111a08e2bc4a" class="">Research - In collaboration with UX Research</h3><p id="0412efd2-8c17-45ee-ac02-8113d91e3914" class="">
+</p><p id="d3236f04-f4b2-4329-85a1-cf7ec508b9c5" class="">Enrichments have played a critical role to all clients, but:</p><ul id="636a53e4-7da3-4b80-a22e-4fce55c31470" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">They are difficult to configure and require technical knowledge</mark></li></ul><ul id="fed7ca2e-17e2-4415-b7c6-9cfbaa3496c2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Configuration requires knowing your data, columns, etc. very well</mark></li></ul><ul id="6712aaf3-a942-430e-a24b-a5de214c4ab2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">A tedious process</mark></li></ul><p id="d77270b2-23db-41b4-8251-3079e0904f2f" class="">
+</p><p id="1d9b45cf-0802-455d-bca9-2563d4ec8ffa" class="">We’re particularly focused on problems occurring during first-time transformation setup among existing clients, and we are less concerned about offering new capabilities.</p><p id="7136c15c-78b6-44f2-a073-35bbef9c7eb6" class="">
+</p><p id="eb3beffb-fe92-4c32-a196-ead89b609e3e" class="">Goal of project:</p><ul id="955655dd-c948-4dc8-9e6c-98783729c445" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Make it easier for users to transform their raw data on their own</mark></li></ul><ul id="68689c1b-2be4-48ae-8f97-043528c50dc9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Reduce likelihood of setting up transformations that result in errors</mark></li></ul><ul id="697ca3e2-4173-4da0-9fc7-82147879a84a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Make it less tedious or repetitive to set up transformations</mark></li></ul><ul id="5c0561ec-a1a4-485a-83c9-3925f449c910" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">Low prio: Offer new transformations that are simple to also offer</mark></li></ul><p id="da6ef2cb-200d-4809-bcd7-082ea28326dd" class=""><mark class="highlight-gray">
+</mark></p><p id="10f0b52f-c30d-4399-af30-54c34a465d76" class="">Research purpose / Decisions to impact:</p><ul id="21a5b391-0751-4144-8695-0985612d045d" class="block-color-gray bulleted-list"><li style="list-style-type:disc">To decide where top opportunities lie and what’s priority to fix / build / improve
+</li></ul><p id="857219fd-2150-467b-b40b-e0b35ab36036" class="">
+</p><h3 id="0517e0e6-4a12-4037-8679-638dbc05a41c" class="">Outcome</h3><p id="3706d935-fe56-4ecb-b4f7-8c707f434af3" class="block-color-gray">Implementation Consultants and Account Managers were the greatest resources in aiding us to prioritise what users use and struggle with the most. 
+
+Referencing the custom transformations Adverity staff set up for users as well as transformations that users most often cannot set up by themselves successfully. </p><p id="89dd6e8b-ae3d-43ad-9fbc-fda2f399b1c9" class="">
+</p><p id="930d92fe-5059-4314-a5af-e877e68b92ed" class="">
+</p><ol type="1" id="8b1ddd2b-fb90-439b-8792-755abbcaf9ae" class="numbered-list" start="1"><li><strong>Problems</strong></li></ol><figure id="ddaf8e86-ef8b-48d6-963c-e04cb24db413" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.30.01.png"><img style="width:1619px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.30.01.png"/></a></figure><p id="b215781b-4a0b-490e-8fbf-013415a29105" class="">
+</p><ol type="1" id="13a7d45f-54b3-47a9-86aa-77e13a967de1" class="numbered-list" start="2"><li><strong>Priority / which enrichment gets used the most</strong></li></ol><figure id="610c1a1a-4292-46e1-b528-3f9dd7d1ed08" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.30.55.png"><img style="width:1047px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.30.55.png"/></a></figure><p id="b3c9e0e4-772c-42d5-bfe3-c7f4ab4b960a" class="">
+</p><ol type="1" id="91f8a090-146c-47e3-91ad-2b95b1d73616" class="numbered-list" start="3"><li><strong>Improve</strong></li></ol><figure id="b1ba1350-5dfe-49d1-ab83-be98bcc7f83c" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.53.45.png"><img style="width:1041px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.53.45.png"/></a></figure><h3 id="66614ab7-8b75-4f26-9c4f-a5ecb846dc64" class="">Our users</h3><p id="da7d979b-1140-44a2-b527-5ce28e30f993" class="block-color-gray">Users will be grouped in two categories.
+Technical (Power users) - Non Technical (Marketing business user)
+Existing users - New users</p><p id="82145d02-5d38-4177-9946-5b2ccdcb8bb0" class="">
+</p><figure id="c02674c0-ea46-49c5-8fa4-07708b9b1a0f" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.54.37.png"><img style="width:1304px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.54.37.png"/></a></figure><h3 id="c2d1e5bc-ee8b-4079-8eb3-0c9dd4d30937" class="">Ideation Session 1 </h3><p id="6ff54ca7-b2ce-4419-ae48-3a4ce004639f" class=""><strong>Collaboration with PM, UX Research, UX Design &amp; Engineering</strong></p><p id="7b6eafb7-9ce3-43f8-a712-9aeed3fdfdfc" class="block-color-gray">High level user flow Workshop. Together we created high level flows which included the input of each stakeholder which solid representation of potential problems in each area. 
+This was the base point we could go forward from. </p><p id="3dcfc007-18fa-4773-a79d-013d5cab6b9f" class="">
+</p><p id="958f8966-5435-4dd0-a187-a5679ee31048" class="">
+</p><figure id="73be5300-2cae-412b-b5d5-58174592c6ae" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.55.43.png"><img style="width:1669px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.55.43.png"/></a></figure><p id="789f38b0-21e3-4537-9f14-9836dd378271" class="">
+</p><h3 id="628f4c45-7aa3-4bb3-b020-3c3fc47dbde7" class=""><strong>Ideation Session 2</strong></h3><p id="e9d2f619-62d7-4e2c-a5b6-1dfb253a8a94" class=""><strong>Collaboration with PM, UX Research, UX Design </strong></p><p id="827049ea-1c3a-4381-b449-5d116df82da0" class="block-color-gray">In our second workshop we focused more on the user journey. 
+Against a list of acceptance criteria we created user flows that could potentially solve the user need.</p><p id="17566b83-075f-4944-846d-2d4e34f9b83e" class="">
+</p><figure id="b964592d-a1b4-4784-8e19-7f081cdac95b" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.56.38.png"><img style="width:1650px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_12.56.38.png"/></a></figure><p id="cfb355d5-ddf3-4bd4-bdf8-16ea48ab01f7" class="">
+</p><p id="1f458811-7550-4593-9c91-c8ed1a3c7322" class="">
+</p><h3 id="c8611913-b250-4c9e-9206-d0ac833f9e6a" class="">The Solution</h3><p id="549f4728-26a6-4d06-9941-66e35e56f74e" class="block-color-gray">Generally, we want to continue in introducing the guided flows which will <mark class="highlight-gray">help set up the enrichment quickly &amp; reliably.</mark></p><p id="fc81cb0d-6f80-4b39-b9b0-c9c5641cf636" class=""><mark class="highlight-gray">Our first solution will contain 2 main (mutually independent parts) parts:
+</mark></p><ol type="1" id="0c3e968a-acad-4296-8434-748bf04d6c66" class="numbered-list" start="1"><li><mark class="highlight-gray">Introducing a new Enrichment types:  enrichments that will help users to harmonise their data without need of deep tech knowledge. 
+</mark></li></ol><ol type="1" id="1eb25f45-30d3-425a-a704-79c000fc6fbe" class="numbered-list" start="2"><li><mark class="highlight-gray">Preview as a part of the flow will help users to get the real time feedback, help with testing &amp; debugging the enrichment. Thanks to such previews, the users do not leave the unfinished work, they leave only when they are satisfied with the enrichment - it fulfils the goal which it was created for.</mark></li></ol><p id="a2c8530a-619a-48bb-9dd5-b61f91c0f5ac" class="">
+</p><p id="0e8c3c00-718a-4b0b-b56e-a51271a71832" class="">
+</p><h3 id="b17ddb66-764e-45b3-bc5e-74e8990b910b" class="">Design
+
+</h3><p id="1e9c399f-24a6-43ca-877b-13c057c77d81" class=""><span style="border-bottom:0.05em solid"><strong>Wireframes</strong></span></p><figure id="8cb1b50c-d135-4d3b-835c-bf384b1da2c0" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_13.28.49.png"><img style="width:1890px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_13.28.49.png"/></a></figure><p id="d43d156d-0783-4d35-8a34-d837133c76e5" class="">
+</p><p id="3b6c9b65-6800-4e6e-9c23-b28d820c434c" class=""><span style="border-bottom:0.05em solid"><strong>Developer Handover</strong></span></p><figure id="649f4fa0-33a4-4af6-9fdb-066f237f66ca" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_15.10.58.png"><img style="width:1826px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Screenshot_2022-04-08_at_15.10.58.png"/></a></figure><p id="ed234e86-077a-42ba-8548-818436491d50" class="">
+</p><p id="fc8c677b-fc2e-4b3d-ac80-ca0db3b20693" class=""><span style="border-bottom:0.05em solid"><strong>Product screens</strong></span></p><figure id="d79a2c65-0307-4a4c-bc69-9f1496469ee4" class="image"><a href="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Enrichment.png"><img style="width:3230px" src="No%20Code%20Enrichments%207622be966ec3408d87bd051187192d91/Enrichment.png"/></a></figure><p id="db2bf776-993d-409f-ae27-64c7b712e765" class="">
+</p><p id="3b1465d1-6c5a-479a-9047-757b4f83ba9c" class="">
+</p><p id="9586ba10-24d8-4876-81b8-a29bb6cb2152" class=""><mark class="highlight-orange">___________________________________________________________________________________</mark></p><p id="ae5f73db-28da-496d-beea-1a76dfe39807" class="">
+</p><p id="9038d71a-16f1-4f1d-9392-df91328c5a77" class=""><mark class="highlight-orange"><em>Please be advised due to the sensitive nature of the work and respect for my previous employer I
+am not going into detail on the projects but rather discussing my role and responsibilities while in
+the position.</em></mark></p><p id="ed49914f-7075-45e4-a0ff-f6ee54c5a9f4" class="">
+</p><p id="98712527-5f9d-4fa8-97ff-1b6d4fabf49b" class=""><mark class="highlight-orange"><em>Thank you for your time.</em></mark></p><p id="635992da-b50b-44df-83b8-be5217fdaa94" class="">
+</p></div></article></body></html>

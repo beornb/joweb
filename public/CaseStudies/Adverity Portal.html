@@ -1,0 +1,733 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Adverity Portal</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FWLKRCYWT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9FWLKRCYWT');
+    </script>
+<style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e01dcf16-86db-4cbb-84a8-1402bcbb6285" class="page sans"><header><img class="page-cover-image" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/zoom-background-flow.png" style="object-position:center 99.33999999999999%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/logo.svg"/></div><h1 class="page-title">Adverity Portal</h1></header><div class="page-body"><p id="be15d483-6019-4351-9176-f911bbf32d9c" class="block-color-gray">Adverity wants to automise interactions between the product and the user, this will allow Adverity to have a <mark class="highlight-gray">“self-service” offering </mark>which will reduce the new users&#x27; onboarding time. Adverity Portal will allow users to sign up to a free plan and enjoy the product with the option to upgrade their plan at any time. </p><p id="ff6f5e66-8e56-40f7-8a59-bc22baf08bc9" class="">
+</p><hr id="9eac842c-cb96-4a71-8b02-ea38f973f3d0"/><p id="5abb01e7-9244-41b0-ab4a-3dd97b39e12e" class="">
+</p><h3 id="a0e77b3c-4429-492f-bbbf-39ad2936a433" class=""><strong>Adverity 2021 / Quarterly Shaping &amp; Building</strong></h3><p id="ce66692d-db2f-4d18-b0ed-773439d54628" class="block-color-gray">Adverity Portal is an ongoing project. A version is shaped and built on a quarterly basis</p><p id="35862bd6-4006-4ba3-9232-f74a3141d66b" class="">
+</p><p id="2f202443-876e-4594-b9f5-267175f281c9" class="">
+</p><figure id="31874de6-4f89-4b53-ad4c-e8843c0d391d" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-07-27_at_14.32.36.png"><img style="width:1247px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-07-27_at_14.32.36.png"/></a></figure><p id="977de8d8-8fe4-4721-932c-1f4dcc8119de" class="">
+</p><h3 id="7d057867-bbce-4995-ac41-e7957ccf83c2" class=""><strong>My role</strong></h3><p id="2685a5c9-bd73-47cb-9836-72e23ab2142c" class="block-color-gray">I was assigned to the Adverity Portal full time as one of two UX and Service Design resources.
+The pod was made up of a Product Manager, Back-end &amp; Front-end engineers, UX &amp; Services designers.</p><p id="2b8d0627-f234-4813-85c8-4b22d221e99d" class="">
+</p><h3 id="78b63960-6a75-4044-be60-091a594926f0" class=""><strong>Project Summary</strong></h3><p id="09019125-16ef-44b8-8259-4f9bbbc1c597" class=""><mark class="highlight-gray">For Adverity Sales, many potential customers are either not profitable to acquire and convert manually, or these customers simply do not want to talk to a sales people to purchase the offering.</mark></p><p id="07105a6f-1779-4abe-8abf-ac9fd21d56d9" class=""><mark class="highlight-gray">At Adverity, we want to aim to create and scale a “self-service” offering. This means acquiring customers and eventually turning them into enterprise or high-paying customers later on.</mark></p><p id="ca157196-33c0-4210-bbf3-7341a7ce9fcd" class=""><mark class="highlight-gray">The Adverity portal is our opportunity to enable this new sales channel.</mark></p><p id="97f3fa0b-abf4-4db2-a977-13ef3aa48f8f" class=""><mark class="highlight-gray">It is a new stand alone application, that should be accessible from the website, and customers can sign-up without any help, and enter into a commercial relationship with Adverity without a sales representative.</mark></p><p id="53af732c-a4f7-4bfe-92c5-2af54db8348f" class="">
+</p><h3 id="d7a5d91a-e7d1-4e1a-b93a-11c25a183493" class=""><strong>The Problem</strong></h3><p id="55267ef8-e3c2-43bf-b775-503c32e6e985" class="block-color-gray">The market has changed a lot of the last few years. We now live in the digital world where most customers have an expectation to gain access to the tools they need instantly. They no longer expect to have to go through lengthy sales processes or wait a long time after signing up.
+
+A lot of the processes we currently have, during customer onboarding are manual. They are heavily reliant on manual input from staff and therefore acts as a bottleneck in the rapid growth of Adverity.</p><p id="6277c22c-5653-4b84-9c50-61f61bf19459" class="block-color-gray">
+Another concern is the lack of transparency for the end user around their subscription.
+Customers like to have control of their assets. This level of control gives comfort to the end user. Currently, this is not possible and requires a conversation to renew or cancel.</p><p id="a7024621-a5b5-4793-8bbf-4cc14fdeae98" class="">
+</p><h3 id="ca0b3fb8-5a67-426a-bba2-be74a986040c" class="">Our users</h3><p id="e31f660e-c45a-4095-aad1-8089fe5c5517" class="block-color-gray">Initially our Sales Team will service our Enterprise customers the Portal will service Startups and Small business customers.
+</p><p id="b3938d67-56c1-4eb4-82d6-40852d08e6c5" class="">
+</p><figure id="5f648642-6158-4bf3-b303-01cff3f61c03" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/work_plan.png"><img style="width:907px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/work_plan.png"/></a></figure><p id="a3e493da-a253-4425-9dad-4daf0d4d34ea" class="">
+</p><h3 id="caffef5e-9974-4d20-8654-33335eacb364" class=""><strong>The Solution</strong></h3><p id="b4178849-b883-4139-94c1-0682fe6d2be3" class="block-color-gray">This product will be a separate application from our main Adverity Platform. It will be eventually enable multiple provisioning of Environments to one Account of Adverity Portal. However it will first start of only providing a single free plan to any customer that signs up
+</p><p id="5294aab5-b315-442f-a992-718968f517d6" class="block-color-gray">The Adverity Portal is due to be for all new customers. It will be the first entry point into Adverity that will allow customers to see full visibility to their relationship with Adverity. This means they will eventually be able to see all products they have purchased with Adverity and as well as be able to manage their purchases. </p><p id="423b97a5-7eb2-4e05-b42b-49f41a603290" class="">
+</p><p id="01fa2852-8427-4188-ba18-ad770c80bd29" class="">
+</p><h3 id="935653df-5ef0-49c5-8c2d-3ac37d77bb7f" class=""><strong>Research </strong></h3><h3 id="12074a90-c694-4851-9a5b-1fd0df82aa0d" class="">1. Our current Sign up process</h3><p id="85dd3730-57d4-475a-b02f-365c0e357512" class="block-color-gray">We mapped out the current onboarding processes the company has.
+We also had a look at who are users are and who the decision makes would be for spending money on acquiring or upgrading.</p><p id="93f77931-5462-427f-b272-1df6a567925e" class="">
+</p><figure id="9aa1cce7-30b2-481a-87f8-0e155950a0d9" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_08.47.03.png"><img style="width:1580px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_08.47.03.png"/></a></figure><p id="86488737-1820-430c-9fb5-2af3480363ab" class="">
+</p><h3 id="92e0e4ff-7090-4a91-8e34-1943fd26f39b" class="">2. Analysis of competitors and other product Sign up process</h3><p id="350668ce-c16f-4279-8b27-1f328b468986" class="block-color-gray">We then looked at onboarding processes of well knows applications to learn how they have approached it based on their business type.
+</p><figure id="add3782e-1cad-4d9c-911d-1e9efcb6f7a8" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_08.51.04.png"><img style="width:1806px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_08.51.04.png"/></a></figure><p id="9de3545f-67ce-4d83-99e8-d6c09b4dde97" class="">
+</p><h3 id="de0f4812-3324-4154-9429-45aa4ee3fd08" class="">3. Our hypothesis for the Sign up process</h3><p id="f19df03c-224e-4a62-9170-535b925f598c" class="block-color-gray">We took to the white board and spent the afternoon ideating on what the potential Sign up could look like based of what we have learned. Taking into account the business objective the company has paired with insights from our current customers revealed by our Account Management team and studying the use cases of other well used products.  Once that was completed we created a digital version in Miro.  </p><p id="0d31b499-d455-47c6-b33e-8dce1a9b0ee8" class="">
+</p><p id="4c671833-6fc2-4123-abb1-63114e5e7314" class="">
+</p><div><figure id="a1d11cf8-9370-4a6d-abf9-5937ce10b34e" class="image"><a href="UX%20Case%20Study%20_%20Adverity%20Portal%20a1d11cf893704a6dabf95937ce10b34e/Screenshot_2022-04-28_at_08.52.51.png"><img style="width:1819px" src="UX%20Case%20Study%20_%20Adverity%20Portal%20a1d11cf893704a6dabf95937ce10b34e/Screenshot_2022-04-28_at_08.52.51.png"/></a></figure><p id="ba96524e-1ab8-46c5-a97d-402e6c9aaed7" class="">
+</p><figure id="92b1ae7f-2dc4-4a47-8de6-0852e2d8d7fb" class="image"><a href="UX%20Case%20Study%20_%20Adverity%20Portal%20a1d11cf893704a6dabf95937ce10b34e/Screenshot_2022-04-28_at_08.53.18.png"><img style="width:1837px" src="UX%20Case%20Study%20_%20Adverity%20Portal%20a1d11cf893704a6dabf95937ce10b34e/Screenshot_2022-04-28_at_08.53.18.png"/></a></figure></div><p id="4e3ce89f-2c47-47e9-bb67-180380a391f7" class="">
+</p><h3 id="e83cc02e-c764-45e2-ad78-09567dc3cef3" class="">Ideation</h3><p id="3b537a56-c1bd-4886-86ba-1d3a05df88d0" class="block-color-gray">From sign up to portal, the next task was the structure of the application.
+There would be two scenario’s a free plan and then also a paid plan. Who where the relevant stakeholders in the organisation we needed to represent and what information did we need to generate from this central point.</p><p id="5facf800-03c3-46d6-8926-d2d61b050018" class="block-color-gray">
+From more Service Design approach we interviewed and worked with the Marketing Team for the upsell and sign up, the Sales team to qualify customers for the CRM, the Legal team for compliance and lastly the Accounting team to integrate a billing solution. </p><p id="7cbd5d39-c685-45b6-b5b6-9d4118c13575" class="">
+</p><figure id="3d4d54ba-0743-4306-8c0a-58433cc9f624" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_09.47.28.png"><img style="width:1895px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_09.47.28.png"/></a></figure><p id="2f61f29f-d4f0-46d8-ad8c-a6991bcecd08" class="">
+</p><p id="f1047e53-e839-49b0-8bf8-a59203b0ee3c" class="block-color-gray">Working further with these two scenarios we started mapping various flow as we discovered that there would be various user experiences based on the business offerings.  For us this meant we had to think about:
+ 
+1. What happens when the user first lands in the portal
+2. What happens when they have been there for a longer period of time
+3. What happens when they upgrade their plan
+4. What happens if they are an existing user</p><p id="405dabe2-db9c-46ae-919a-0b605a483d7d" class="">
+</p><figure id="b41b968c-5fe9-4aad-9645-d7b94b105ec5" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_09.50.50.png"><img style="width:1893px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_09.50.50.png"/></a></figure><p id="406a5f80-eeaa-4083-beb4-c874b0b58d9e" class="">
+</p><p id="2a61fd3e-f8a8-4dc8-89a0-f3e1ea5f6e12" class="block-color-gray">Business changed the timeline, we had to narrow down our first delivery to MVP
+Our focus going forward would only be the free plan offering and the sign up
+We had to create a flow - validate with other stakeholders and use the Design System to create our UI.</p><p id="55da9948-464f-420d-aac0-361f9b76b32b" class="">
+</p><h3 id="3b2e48fb-0c18-4cfc-bc5f-ce616a8aa59c" class="">Design</h3><p id="b00ccd5e-ebc6-46d9-827c-8465d47e56f7" class="block-color-gray">We translated our Miro flows into basic Figma flows using our Design System components, thus giving the engineers sight of what we would like to achieve.
+</p><p id="f726862d-504a-48b0-a842-ef6d8b3e25f5" class="block-color-gray">We worked simultaneously with the backend engineering team. As they set up the backend we did finalised design to hand over to the front-end engineers.</p><p id="1d3f75af-ae2b-407f-96ab-28b3657c2034" class="">
+</p><p id="34dce7b3-bbaf-4e3c-9836-6e6adf5746a3" class="block-color-gray">Close collaboration with the Product Marketing team was also essential. A cohesive experience between the marketing website and the platform is essential to ensure the user feels comfortable in all 3 areas Adverity owns.</p><p id="e16591a4-bf2b-42c5-b38e-66176a37c55a" class="">
+</p><figure id="25377038-f23c-4de2-ae1a-d26db94e3083" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_16.20.46.png"><img style="width:1893px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_16.20.46.png"/></a></figure><p id="3ab611fa-9208-47f6-8740-54df735f6984" class="">
+</p><figure id="2a9f904f-f0bc-4acc-98af-2efdc966cb7a" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_16.21.16.png"><img style="width:1883px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-04-28_at_16.21.16.png"/></a></figure><p id="41c49b7d-ddbb-4600-be86-ba5267433f42" class="">
+</p><figure id="fb671a52-6672-483e-a8a7-0c3a40f532bb" class="image"><a href="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-08-22_at_16.02.12.png"><img style="width:1465px" src="Adverity%20Portal%2031874de64f894b53ad4ce8843c0d391d/Screenshot_2022-08-22_at_16.02.12.png"/></a></figure><p id="be7d392c-a484-42f7-9ce5-70c826cd1a6b" class="">
+</p><h3 id="fd57c5aa-4de9-4d7d-ab40-65d3f110d9d0" class="block-color-gray">
+<mark class="highlight-orange">________________________________________________________________</mark></h3><p id="8988db10-8d82-47fb-a546-9d6269382304" class="">
+</p><p id="a72dbd2f-fa53-47a2-b25f-23829186071d" class=""><mark class="highlight-orange"><em>Please be advised due to the sensitive nature of the work and respect for my previous employer I
+am not going into detail on the projects but rather discussing my role and responsibilities while in
+the position.</em></mark></p><p id="e869a335-5626-4abb-a5e5-9592c48bd893" class="">
+</p><p id="4dcea41a-1c11-4f78-95de-e0bf35f526c3" class=""><mark class="highlight-orange"><em>Thank you for your time.</em></mark></p><p id="fce17f6d-e175-4f4d-aa18-ae79e23a7181" class="">
+</p></div></article></body></html>
